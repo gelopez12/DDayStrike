@@ -129,8 +129,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 72.643
+      value: 72.81
       objectReference: {fileID: 0}
     - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
       propertyPath: m_LocalPosition.y
@@ -138,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 175.929
+      value: 176.41
       objectReference: {fileID: 0}
     - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
       propertyPath: m_LocalRotation.w
@@ -869,11 +881,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.5005465
+      value: 4.9
       objectReference: {fileID: 0}
     - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 80.035
+      value: 72.9
       objectReference: {fileID: 0}
     - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
       propertyPath: m_LocalRotation.w
@@ -963,6 +975,63 @@ PrefabInstance:
     - target: {fileID: 8010525065880168533, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
       propertyPath: m_Name
       value: P_rsg_military_antitank_hedgehog_01 (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+--- !u!1001 &1288805169
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.957491
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.5005474
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 87.91387
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233003891075724015, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010525065880168533, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+      propertyPath: m_Name
+      value: P_rsg_military_antitank_hedgehog_01 (12)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1352,63 +1421,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
---- !u!1001 &7001046686712897092
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 72.753
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 175.997
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6285594
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7777615
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 102.112
-      objectReference: {fileID: 0}
-    - target: {fileID: 5856519355644658872, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6488941593080765954, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
-      propertyPath: m_Name
-      value: P_rsg_military_barbed_wire_01
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 908a66b948c67b14ca102e8f19566480, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1430,5 +1442,5 @@ SceneRoots:
   - {fileID: 1221156489}
   - {fileID: 2118996344}
   - {fileID: 885500921}
-  - {fileID: 7001046686712897092}
   - {fileID: 324861103}
+  - {fileID: 1288805169}
