@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10.0f;
+    public float bulletSpeed = 50.0f;
     public float turnSpeed = 500.0f;
     public float angle;
     public float horizontalInput;
     public float verticalInput;
+    public GameObject bulletPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +23,8 @@ public class PlayerController : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
+        transform.position -= (Vector3.forward * Time.deltaTime * speed * horizontalInput);
+        transform.position += (Vector3.right * Time.deltaTime * speed * verticalInput);
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.y));
 
         Vector3 direction = mousePosition - transform.position;
