@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletBehavior : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
-
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +13,15 @@ public class BulletBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject, 3f);
+        
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
     }
 }
