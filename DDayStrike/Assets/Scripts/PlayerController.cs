@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float minX = -6f;
-    public float maxX = 122f;
+    public float minX = -5f;
+    public float maxX = 118f;
     public float minZ = 28f;
     public float maxZ = 172f;
     public float speed = 10.0f;
