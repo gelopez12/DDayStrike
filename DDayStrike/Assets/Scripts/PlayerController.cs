@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
     public float turnSpeed = 500.0f;
     public float angle;
     public float horizontalInput;
+    public bool horizontalInputBool;
     public float verticalInput;
+    public bool verticalInputBool;
     public GameObject bulletPrefab;
     private Animator animator;
 
@@ -27,9 +29,28 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Get arrow key inputs
+        // Get movement key inputs
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
+
+        // Checking if movement keys are pressed
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
+        {
+            verticalInputBool = true;
+        }
+        else
+        {
+            verticalInputBool = false;
+        }
+
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        {
+            horizontalInputBool = true;
+        }
+        else
+        {
+            horizontalInputBool = false;
+        }
 
         // Calculate movement based on arrow keys
         Vector3 arrowKeyMovement = new Vector3(verticalInput, 0, -horizontalInput) * speed * Time.deltaTime;
