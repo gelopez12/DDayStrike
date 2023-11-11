@@ -1,34 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnemyHealth : MonoBehaviour
+public class PlayersHealth : MonoBehaviour
 {
-    public int maxHealth = 2; 
-
-    private int currentHealth; 
+    public int maxHealth = 3; 
+    private int currentHealth;
 
     void Start()
     {
-        currentHealth = maxHealth; 
+        currentHealth = maxHealth;
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        
         if (collision.gameObject.CompareTag("Bullet"))
         {
             currentHealth--;
 
             if (currentHealth <= 0)
             {
-                Destroy(gameObject);
+                GameOver();
             }
         }
     }
-    // Update is called once per frame
-    void Update()
+
+    void GameOver()
     {
-        
+        Debug.Log("Game Over");
+        SceneManager.LoadScene("HomeScreen");
     }
 }
