@@ -22,10 +22,8 @@ public class SpawnPoint : MonoBehaviour
         // Check if there are valid spawn points
         if (spawnPoints.Length > 0)
         {
-            // Randomly choose a spawn point
             Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
-            // Instantiate the enemy at the chosen spawn point
             Instantiate(enemyPrefab, randomSpawnPoint.position, Quaternion.identity);
         }
     }
