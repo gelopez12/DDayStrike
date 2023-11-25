@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyFollows : MonoBehaviour
 {
     private GameObject player; 
-    public float speed = 5f; 
+    public float speed = 2f; 
 
     void Start()
     {

@@ -7,7 +7,7 @@ public class EnemyShoot : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform firePoint;
     public float shootInterval = 2f;
-    public float projectileSpeed = 100f;
+    public float projectileSpeed = 200f;
 
     private GameObject player;
 

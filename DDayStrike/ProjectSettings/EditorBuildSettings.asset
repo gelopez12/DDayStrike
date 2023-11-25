@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 3cf95290c0480c444a0942f351a7b098
+  - enabled: 1
+    path: Assets/Scenes/DeadScene.unity
+    guid: 65f708976788c9147a48247b4eaf7968
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

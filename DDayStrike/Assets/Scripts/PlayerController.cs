@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float minX = -5f;
+    public float minX = 0f;
     public float maxX = 118f;
     public float minZ = 28f;
     public float maxZ = 172f;

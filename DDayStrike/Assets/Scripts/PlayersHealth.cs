@@ -32,6 +32,6 @@ public class PlayersHealth : MonoBehaviour
     void GameOver()
     {
         Debug.Log("Game Over");
-        SceneManager.LoadScene("HomeScreen");
+        SceneManager.LoadScene("DeadScene");
     }
 }
