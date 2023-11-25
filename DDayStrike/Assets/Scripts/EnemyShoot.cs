@@ -8,7 +8,7 @@ public class EnemyShoot : MonoBehaviour
     public Transform firePoint;
     public float shootInterval = 2f;
     public float projectileSpeed = 200f;
-
+    public AudioSource EnShoot;
     private GameObject player;
 
     void Start()
@@ -22,7 +22,7 @@ public class EnemyShoot : MonoBehaviour
     {
         if (player != null && firePoint != null)
         {
-            
+            EnShoot.Play();
             Vector3 direction = player.transform.position - firePoint.position;
             
             direction.Normalize();
