@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class PlayersHealth : MonoBehaviour
 {
     public int maxHealth = 3; 
     private int currentHealth;
+    public AudioSource HitSource;
 
     void Start()
     {
@@ -18,6 +20,7 @@ public class PlayersHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             currentHealth--;
+            HitSource.Play();
 
             if (currentHealth <= 0)
             {
