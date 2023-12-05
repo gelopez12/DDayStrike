@@ -2310,9 +2310,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504916717}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
---- !u!1001 &512656070
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
