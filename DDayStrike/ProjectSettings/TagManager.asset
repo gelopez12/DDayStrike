@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - schutzstaffel_b
+  - FxTemporaire
+  - schutzstaffel_a
+  - wehrmacht_c
+  - wehrmacht_b
+  - wehrmacht_a
+  - Ring
   layers:
   - Default
   - TransparentFX
