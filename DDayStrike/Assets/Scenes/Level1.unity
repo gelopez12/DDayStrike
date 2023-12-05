@@ -2393,6 +2393,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4c6c192b35c498f4c8ce6240df182c1d, type: 3}
   m_PrefabInstance: {fileID: 512656070}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> parent of d67b413 (wires and antitanks)
 --- !u!1 &513457786
 GameObject:
   m_ObjectHideFlags: 0
