@@ -21,9 +21,6 @@ public class DeadScript : MonoBehaviour
         {
             // Load the "Level1" scene
             SceneManager.LoadScene("Level1");
-        } else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("HomeScreen");
         }
 
         // The following line will play the DeadScreen audio source in every frame.
