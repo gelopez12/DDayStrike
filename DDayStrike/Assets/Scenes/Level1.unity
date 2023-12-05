@@ -3091,6 +3091,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504916717}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
 --- !u!1001 &512656070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3423,6 +3424,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d676aab782303b64493f412658c04e72, type: 3}
   m_PrefabInstance: {fileID: 535511164}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> 4ab03bd910cf4df944c95eae5ca67d6615ce50ef
 --- !u!1 &536622291
 GameObject:
   m_ObjectHideFlags: 0
@@ -8536,8 +8539,7 @@ Transform:
   m_LocalPosition: {x: 0.33, y: 2.17, z: 1.41}
   m_LocalScale: {x: 1.1793803, y: 1.0760903, z: 1.2641743}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 513457788}
+  m_Children: []
   m_Father: {fileID: 317476776}
   m_LocalEulerAnglesHint: {x: 1.468, y: -6.567, z: 3.578}
 --- !u!199 &1357070733
@@ -12460,7 +12462,7 @@ ParticleSystem:
   LightsModule:
     enabled: 1
     ratio: 0
-    light: {fileID: 513457787}
+    light: {fileID: 0}
     randomDistribution: 1
     color: 1
     range: 1
