@@ -2489,7 +2489,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1357070732}
   m_LocalEulerAnglesHint: {x: 0, y: -0.064, z: -2.67}
-<<<<<<< HEAD
 --- !u!1001 &530386285
 PrefabInstance:
   m_ObjectHideFlags: 0
