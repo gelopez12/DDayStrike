@@ -13,6 +13,7 @@ public class MissionController : MonoBehaviour
     public GameObject RRingPrefab;
     public GameObject AmbushRing;
     public GameObject ARingPrefab;
+    public GameObject enemyPrefab;
     public float ringXPos; //12f to 50f
     public float ringYPos = 3.37f; //constant
     public float ringZPos; //35f to 165f
@@ -25,8 +26,11 @@ public class MissionController : MonoBehaviour
     public float aRingY; // 3.37f
     public float aRingZ; //40f to 90f
     public float a;
+    public int i;
+    public int r;
     public bool revive;
     public bool ambush;
+    public float ambushTime = 0;
     public int missionNum = 0;
 
     void Start()
@@ -52,6 +56,12 @@ public class MissionController : MonoBehaviour
         aRingZ = Random.Range(40.0f, 90.0f);
         ringSpawnPos = new Vector3(aRingX, aRingY, aRingZ);
         ARingPrefab = Instantiate(AmbushRing, ringSpawnPos, Quaternion.Euler(0, 0, 90));
+        for (int i = 0; i < 5; i++)
+        {
+            aRingX = Random.Range((aRingX - 1.5f), (aRingX + 1.5f));
+            aRingZ = Random.Range((aRingZ - 1.5f), (aRingZ + 1.5f));
+            Instantiate(enemyPrefab, new Vector3(aRingX, aRingY + 2.0f, aRingZ), Quaternion.identity);
+        }
     }
 
     // Update is called once per frame
@@ -61,20 +71,30 @@ public class MissionController : MonoBehaviour
 
         //"Revive"
         revive = pcScript.inReviveRing;
-        if (revive == true && Input.GetKeyDown(KeyCode.F))
+        while (r == 0)
         {
-            Destroy(RRingPrefab);
-            DPPrefab.transform.Rotate(-90, 0, 0);
-            DPPrefab.transform.position += new Vector3(0, 2, 0);
-            missionNum++;
+            if (revive == true && Input.GetKeyDown(KeyCode.F))
+            {
+                Destroy(RRingPrefab);
+                DPPrefab.transform.Rotate(-90, 0, 0);
+                DPPrefab.transform.position += new Vector3(0, 1, 0);
+                missionNum++;
+                r++;
+            }
         }
-
+            
         //"Ambush"
         ambush = pcScript.inAmbushRing;
-        if (ambush == true)
+        if (ambush == true && ambushTime < 10)
         {
-            missionNum++;
-            Debug.Log(missionNum);
+            ambushTime += Time.deltaTime;
         }
+        if (ambushTime >= 10)
+        {
+            ambushTime = 0;
+            Destroy(ARingPrefab);
+            missionNum++;
+        }
+        
     }
 }

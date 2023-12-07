@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyFollows : MonoBehaviour
 {
-    private GameObject player; 
+    private GameObject player;
     public float speed = 2.5f; 
      
 
@@ -45,6 +45,18 @@ public class EnemyFollows : MonoBehaviour
         if (player == null)
         {
             Debug.LogError("Player not found. Make sure the player is tagged with 'Player'.");
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.name == "Ambush Collider")
+        {
+            speed = 0;
+        }
+        else
+        {
+            speed = 2.5f;
         }
     }
 }

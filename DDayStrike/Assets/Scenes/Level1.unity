@@ -1940,6 +1940,7 @@ MonoBehaviour:
   a: 0
   revive: 0
   ambush: 0
+  ambushTime: 0
   missionNum: 0
 --- !u!4 &360662970
 Transform:
