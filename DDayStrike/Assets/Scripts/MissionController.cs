@@ -20,8 +20,7 @@ public class MissionController : MonoBehaviour
     public float downZPos;
     public Vector3 downPos;
     public float a;
-
-    public bool testBool;
+    public bool revive;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +45,8 @@ public class MissionController : MonoBehaviour
     void Update()
     {
         //pcScript.Test(a);
-        testBool = pcScript.inReviveRing;
-        if (testBool == true && Input.GetKeyDown(KeyCode.F))
+        revive = pcScript.inReviveRing;
+        if (revive == true && Input.GetKeyDown(KeyCode.F))
         {
             Destroy(RRingPrefab);
             DPPrefab.transform.Rotate(-90, 0, 0);

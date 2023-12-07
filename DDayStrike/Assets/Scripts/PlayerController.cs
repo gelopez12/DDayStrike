@@ -103,21 +103,12 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.name == "Revive Collider")
         {
-            //Destroy(collision.gameObject);
             inReviveRing = true;
         } else
         {
             inReviveRing = false;
         }
     }
-
-    /*void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.name == "Revive Collider")
-        {
-            inReviveRing = false;
-        }
-    } */
 
     public void Test(float a)
     {
