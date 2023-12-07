@@ -71,16 +71,12 @@ public class MissionController : MonoBehaviour
 
         //"Revive"
         revive = pcScript.inReviveRing;
-        while (r == 0)
+        if (revive == true && Input.GetKeyDown(KeyCode.F))
         {
-            if (revive == true && Input.GetKeyDown(KeyCode.F))
-            {
-                Destroy(RRingPrefab);
-                DPPrefab.transform.Rotate(-90, 0, 0);
-                DPPrefab.transform.position += new Vector3(0, 1, 0);
-                missionNum++;
-                r++;
-            }
+            Destroy(RRingPrefab);
+            DPPrefab.transform.Rotate(-90, 0, 0);
+            DPPrefab.transform.position += new Vector3(0, 1, 0);
+            missionNum++;
         }
             
         //"Ambush"
