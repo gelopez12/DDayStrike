@@ -7354,6 +7354,7 @@ MonoBehaviour:
   verticalInput: 0
   verticalInputBool: 0
   bulletPrefab: {fileID: 7764330751560469990, guid: 02db12a3fba135641a9d4109b97b4f7d, type: 3}
+  inReviveRing: 0
 --- !u!95 &727447877
 Animator:
   serializedVersion: 7
@@ -9955,7 +9956,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 484498f3f5da5a44c8c453c594f11a47, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
