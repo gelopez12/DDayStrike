@@ -21,11 +21,11 @@ public class MissionController : MonoBehaviour
     public Vector3 downPos;
     public float a;
     public bool revive;
-    // Start is called before the first frame update
+
     void Start()
     {
         pcScript = player.GetComponent<PlayerController>();
-        a = 25.0f;
+        //a = 25.0f;
         //Testing Ring Spawn
         //ringSpawnPos = new Vector3(Random.Range(12.0f, 50.0f), ringYPos, Random.Range(35.0f, 165.0f));
         //Instantiate(Ring, ringSpawnPos, Quaternion.Euler(0,0,90));

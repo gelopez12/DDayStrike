@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.name == "Revive Collider")
+        if (collision.gameObject.name == "Revive Collider" || collision.gameObject.name == "Down Player(Clone)")
         {
             inReviveRing = true;
         } else
