@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class MissionController : MonoBehaviour
 {
+    public GameObject player;
+    PlayerController pcScript;
     public GameObject DownPlayer;
+    public GameObject DPPrefab;
     public GameObject Ring;
     public GameObject ReviveRing;
+    public GameObject RRingPrefab;
     public float ringXPos; //12f to 50f
     public float ringYPos = 3.38f;
     public float ringZPos; //35f to 165f
@@ -15,11 +19,14 @@ public class MissionController : MonoBehaviour
     public float downYPos;
     public float downZPos;
     public Vector3 downPos;
-    public bool inReviveRing;
+    public float a;
 
+    public bool testBool;
     // Start is called before the first frame update
     void Start()
     {
+        pcScript = player.GetComponent<PlayerController>();
+        a = 25.0f;
         //Testing Ring Spawn
         //ringSpawnPos = new Vector3(Random.Range(12.0f, 50.0f), ringYPos, Random.Range(35.0f, 165.0f));
         //Instantiate(Ring, ringSpawnPos, Quaternion.Euler(0,0,90));
@@ -30,14 +37,21 @@ public class MissionController : MonoBehaviour
         downZPos = Random.Range(38.0f, 160.0f);
         downPos = new Vector3(downXPos, downYPos, downZPos);
         ringSpawnPos = new Vector3(downXPos, 4.11f, downZPos);
-        Instantiate(DownPlayer, downPos, Quaternion.Euler(90, 0, 0));
-        Instantiate(ReviveRing, ringSpawnPos, Quaternion.Euler(0, 0, 90));
+        DPPrefab = Instantiate(DownPlayer, downPos, Quaternion.Euler(90, 0, 0));
+        RRingPrefab = Instantiate(ReviveRing, ringSpawnPos, Quaternion.Euler(0, 0, 90));
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //pcScript.Test(a);
+        testBool = pcScript.inReviveRing;
+        if (testBool == true && Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(RRingPrefab);
+            DPPrefab.transform.Rotate(-90, 0, 0);
+            DPPrefab.transform.position += new Vector3(0, 2, 0);
+        }
     }
 }

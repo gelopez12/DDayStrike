@@ -18,10 +18,12 @@ public class PlayerController : MonoBehaviour
     public bool verticalInputBool;
     public GameObject bulletPrefab;
     private Animator animator;
+    public bool inReviveRing;
 
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("");
         animator = GetComponent<Animator>();
     }
 
@@ -95,6 +97,31 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("IsWalking", false);
         }
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.name == "Revive Collider")
+        {
+            //Destroy(collision.gameObject);
+            inReviveRing = true;
+        } else
+        {
+            inReviveRing = false;
+        }
+    }
+
+    /*void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.name == "Revive Collider")
+        {
+            inReviveRing = false;
+        }
+    } */
+
+    public void Test(float a)
+    {
+        Debug.Log(a);
     }
 }
 
