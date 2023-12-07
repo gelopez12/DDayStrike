@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletPrefab;
     private Animator animator;
     public bool inReviveRing;
+    public bool inAmbushRing;
 
     // Start is called before the first frame update
     void Start()
@@ -101,12 +102,22 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
+        //"Revive"
         if (collision.gameObject.name == "Revive Collider" || collision.gameObject.name == "Down Player(Clone)")
         {
             inReviveRing = true;
         } else
         {
             inReviveRing = false;
+        }
+
+        //"Ambush"
+        if (collision.gameObject.name == "Ambush Collider")
+        {
+            inAmbushRing = true;
+        } else
+        {
+            inAmbushRing = false;
         }
     }
 

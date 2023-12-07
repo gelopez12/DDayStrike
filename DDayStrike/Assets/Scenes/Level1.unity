@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589245, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1163,6 +1163,7 @@ MonoBehaviour:
   verticalInputBool: 0
   bulletPrefab: {fileID: 7764330751560469990, guid: 02db12a3fba135641a9d4109b97b4f7d, type: 3}
   inReviveRing: 0
+  inAmbushRing: 0
 --- !u!4 &317476776
 Transform:
   m_ObjectHideFlags: 0
@@ -1923,6 +1924,8 @@ MonoBehaviour:
   Ring: {fileID: 5139392626638838420, guid: f091d7286ed00d642b384090cefe4247, type: 3}
   ReviveRing: {fileID: 2027971137346062739, guid: 8b190a8fb6be4474daebd4ca74d493a1, type: 3}
   RRingPrefab: {fileID: 0}
+  AmbushRing: {fileID: 4027860737327822447, guid: 721340246f56f1d47bd99b41fddb838a, type: 3}
+  ARingPrefab: {fileID: 0}
   ringXPos: 0
   ringYPos: 3.38
   ringZPos: 0
@@ -1931,8 +1934,13 @@ MonoBehaviour:
   downYPos: 0
   downZPos: 0
   downPos: {x: 0, y: 0, z: 0}
+  aRingX: 0
+  aRingY: 3.37
+  aRingZ: 0
   a: 0
   revive: 0
+  ambush: 0
+  missionNum: 0
 --- !u!4 &360662970
 Transform:
   m_ObjectHideFlags: 0

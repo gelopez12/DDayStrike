@@ -11,16 +11,23 @@ public class MissionController : MonoBehaviour
     public GameObject Ring;
     public GameObject ReviveRing;
     public GameObject RRingPrefab;
+    public GameObject AmbushRing;
+    public GameObject ARingPrefab;
     public float ringXPos; //12f to 50f
-    public float ringYPos = 3.38f;
+    public float ringYPos = 3.37f; //constant
     public float ringZPos; //35f to 165f
     public Vector3 ringSpawnPos;
     public float downXPos;
     public float downYPos;
     public float downZPos;
     public Vector3 downPos;
+    public float aRingX; //45f to 52f
+    public float aRingY; // 3.37f
+    public float aRingZ; //40f to 90f
     public float a;
     public bool revive;
+    public bool ambush;
+    public int missionNum = 0;
 
     void Start()
     {
@@ -30,7 +37,7 @@ public class MissionController : MonoBehaviour
         //ringSpawnPos = new Vector3(Random.Range(12.0f, 50.0f), ringYPos, Random.Range(35.0f, 165.0f));
         //Instantiate(Ring, ringSpawnPos, Quaternion.Euler(0,0,90));
 
-        //Testing "Revive"
+        //"Revive"
         downXPos = 8.0f;
         downYPos = 5.0f;
         downZPos = Random.Range(38.0f, 160.0f);
@@ -39,18 +46,35 @@ public class MissionController : MonoBehaviour
         DPPrefab = Instantiate(DownPlayer, downPos, Quaternion.Euler(90, 0, 0));
         RRingPrefab = Instantiate(ReviveRing, ringSpawnPos, Quaternion.Euler(0, 0, 90));
 
+        //"Ambush"
+        aRingX = Random.Range(45.0f, 52.0f);
+        aRingY = 3.37f;
+        aRingZ = Random.Range(40.0f, 90.0f);
+        ringSpawnPos = new Vector3(aRingX, aRingY, aRingZ);
+        ARingPrefab = Instantiate(AmbushRing, ringSpawnPos, Quaternion.Euler(0, 0, 90));
     }
 
     // Update is called once per frame
     void Update()
     {
         //pcScript.Test(a);
+
+        //"Revive"
         revive = pcScript.inReviveRing;
         if (revive == true && Input.GetKeyDown(KeyCode.F))
         {
             Destroy(RRingPrefab);
             DPPrefab.transform.Rotate(-90, 0, 0);
             DPPrefab.transform.position += new Vector3(0, 2, 0);
+            missionNum++;
+        }
+
+        //"Ambush"
+        ambush = pcScript.inAmbushRing;
+        if (ambush == true)
+        {
+            missionNum++;
+            Debug.Log(missionNum);
         }
     }
 }
