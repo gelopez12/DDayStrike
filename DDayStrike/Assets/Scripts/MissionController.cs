@@ -21,8 +21,8 @@ public class MissionController : MonoBehaviour
     void Start()
     {
         //Testing Ring Spawn
-        ringSpawnPos = new Vector3(Random.Range(12.0f, 50.0f), ringYPos, Random.Range(35.0f, 165.0f));
-        Instantiate(Ring, ringSpawnPos, Quaternion.Euler(0,0,90));
+        //ringSpawnPos = new Vector3(Random.Range(12.0f, 50.0f), ringYPos, Random.Range(35.0f, 165.0f));
+        //Instantiate(Ring, ringSpawnPos, Quaternion.Euler(0,0,90));
 
         //Testing "Revive"
         downXPos = 8.0f;
