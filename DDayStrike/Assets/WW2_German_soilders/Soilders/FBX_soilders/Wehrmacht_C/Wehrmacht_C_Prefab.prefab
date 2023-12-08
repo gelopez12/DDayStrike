@@ -83,6 +83,7 @@ MonoBehaviour:
   firePoint: {fileID: 6809802164646228635}
   shootInterval: 2
   projectileSpeed: 200
+  shootingRange: 10
   EnShoot: {fileID: 5833853279924954444}
 --- !u!136 &1907891316145996283
 CapsuleCollider:
@@ -291,7 +292,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 80
   m_CollisionDetection: 1
 --- !u!1 &1050983413410078

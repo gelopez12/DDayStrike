@@ -8,13 +8,13 @@ public class EnemyShoot : MonoBehaviour
     public Transform firePoint;
     public float shootInterval = 2f;
     public float projectileSpeed = 200f;
+    public float shootingRange = 50f; // Adjust this value based on your desired shooting range
     public AudioSource EnShoot;
     private GameObject player;
 
     void Start()
     {
-        FindPlayer(); 
-      
+        FindPlayer();
         InvokeRepeating("ShootAtPlayer", 0f, shootInterval);
     }
 
@@ -22,16 +22,20 @@ public class EnemyShoot : MonoBehaviour
     {
         if (player != null && firePoint != null)
         {
-            EnShoot.Play();
-            Vector3 direction = player.transform.position - firePoint.position;
-            
-            direction.Normalize();
-           
-            GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+            // Check the distance between the enemy and the player
+            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-            Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+            if (distanceToPlayer <= shootingRange)
+            {
+                EnShoot.Play();
+                Vector3 direction = player.transform.position - firePoint.position;
+                direction.Normalize();
 
-            projectileRb.AddForce(direction * projectileSpeed, ForceMode.Impulse);
+                GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+
+                Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
+                projectileRb.AddForce(direction * projectileSpeed, ForceMode.Impulse);
+            }
         }
     }
 
@@ -44,5 +48,4 @@ public class EnemyShoot : MonoBehaviour
             Debug.LogError("Player not found. Make sure the player is tagged with 'Player'.");
         }
     }
-
 }
