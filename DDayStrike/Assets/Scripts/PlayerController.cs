@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public bool inAmbushRing;
     public bool inRetrieveRing;
     public bool inDropRing;
+    public bool inEscortRing;
 
     // Start is called before the first frame update
     void Start()
@@ -136,6 +137,15 @@ public class PlayerController : MonoBehaviour
         } else
         {
             inDropRing = false;
+        }
+
+        //"Escort"
+        if (collision.gameObject.name == "Escort Collider")
+        {
+            inEscortRing = true;
+        } else
+        {
+            inEscortRing = false;
         }
     }
 

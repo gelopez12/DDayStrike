@@ -20,6 +20,8 @@ public class MissionController : MonoBehaviour
     public GameObject RetRingPrefab;
     public GameObject DropRing;
     public GameObject DRPrefab;
+    public GameObject EscortRing;
+    public GameObject ERingPrefab;
     public Vector3 ringSpawnPos;
     public float downXPos;
     public float downYPos;
@@ -32,6 +34,10 @@ public class MissionController : MonoBehaviour
     public float retYPos; // 
     public float retZPos; //160f to 170f
     public Vector3 retrievePos;
+    public float ERSpeed = 3.0f;
+    public float eRingX;
+    public float eRingY;
+    public float eRingZ;
     public float a;
     public int i;
     public bool revive;
@@ -41,6 +47,7 @@ public class MissionController : MonoBehaviour
     public bool retrieve;
     public bool retrieval = false;
     public bool drop;
+    public bool escort;
     public int missionNum = 0;
 
     void Start()
@@ -64,12 +71,6 @@ public class MissionController : MonoBehaviour
         aRingZ = Random.Range(40.0f, 90.0f);
         ringSpawnPos = new Vector3(aRingX, aRingY, aRingZ);
         ARingPrefab = Instantiate(AmbushRing, ringSpawnPos, Quaternion.Euler(0, 0, 90));
-        /*for (int i = 0; i < 5; i++)
-        {
-            aRingX = Random.Range((aRingX - 2.0f), (aRingX + 2.0f));
-            aRingZ = Random.Range((aRingZ - 2.0f), (aRingZ + 2.0f));
-            Instantiate(enemyPrefab, new Vector3(aRingX, aRingY + 2.0f, aRingZ), Quaternion.identity);
-        }*/
 
         //"Retrieve"
         retXPos = Random.Range(30.0f, 50.0f);
@@ -79,6 +80,11 @@ public class MissionController : MonoBehaviour
         ringSpawnPos = new Vector3(retXPos, 4.23f, retZPos);
         RetObjPrefab = Instantiate(RetrieveObj, retrievePos, Quaternion.identity);
         RetRingPrefab = Instantiate(RetrieveRing, ringSpawnPos, Quaternion.Euler(0, 0, 90));
+
+        //"Escort/Bangalore"
+        eRingX = 9.4f;
+        eRingY = 3.38f;
+        eRingZ = 100f;
     }
 
     // Update is called once per frame
@@ -133,6 +139,17 @@ public class MissionController : MonoBehaviour
             Destroy(DRPrefab);
             missionNum++;
         }
-        
+        //"Escort/Bangalore"
+        escort = pcScript.inEscortRing;
+        if (missionNum == 3)
+        {
+            missionNum = 0;
+            ERingPrefab = Instantiate(EscortRing, new Vector3(9.4f, 3.38f, 100f), Quaternion.Euler(0, 0, 90));
+        }
+        if (escort == true)
+        {
+            eRingX = eRingX + .01f;
+            ERingPrefab.transform.position = new Vector3(eRingX, eRingY, eRingZ);
+        }
     }
 }
