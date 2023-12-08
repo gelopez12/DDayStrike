@@ -64,12 +64,12 @@ public class MissionController : MonoBehaviour
         aRingZ = Random.Range(40.0f, 90.0f);
         ringSpawnPos = new Vector3(aRingX, aRingY, aRingZ);
         ARingPrefab = Instantiate(AmbushRing, ringSpawnPos, Quaternion.Euler(0, 0, 90));
-        for (int i = 0; i < 5; i++)
+        /*for (int i = 0; i < 5; i++)
         {
-            aRingX = Random.Range((aRingX - 1.5f), (aRingX + 1.5f));
-            aRingZ = Random.Range((aRingZ - 1.5f), (aRingZ + 1.5f));
+            aRingX = Random.Range((aRingX - 2.0f), (aRingX + 2.0f));
+            aRingZ = Random.Range((aRingZ - 2.0f), (aRingZ + 2.0f));
             Instantiate(enemyPrefab, new Vector3(aRingX, aRingY + 2.0f, aRingZ), Quaternion.identity);
-        }
+        }*/
 
         //"Retrieve"
         retXPos = Random.Range(30.0f, 50.0f);
@@ -103,6 +103,13 @@ public class MissionController : MonoBehaviour
         ambush = pcScript.inAmbushRing;
         if (ambush == true && ambushTime < 10)
         {
+            if (ambushTime < .075f)
+            {
+                aRingX = aRingX + 5.0f; //Random.Range((aRingX + 5.0f), (aRingX + 10.0f));
+                aRingZ = Random.Range((aRingZ - 4.0f), (aRingZ + 4.0f));
+                Instantiate(enemyPrefab, new Vector3(aRingX, aRingY + 2.0f, aRingZ), Quaternion.identity);
+                aRingX = aRingX - 5.0f;
+            }
             ambushTime += Time.deltaTime;
         }
         if (ambushTime >= 10)

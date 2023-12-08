@@ -47,16 +47,4 @@ public class EnemyFollows : MonoBehaviour
             Debug.LogError("Player not found. Make sure the player is tagged with 'Player'.");
         }
     }
-
-    void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.name == "Ambush Collider")
-        {
-            speed = 0;
-        }
-        else
-        {
-            speed = 2.5f;
-        }
-    }
 }
