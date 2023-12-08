@@ -18,6 +18,8 @@ public class MissionController : MonoBehaviour
     public GameObject RetObjPrefab;
     public GameObject RetrieveRing;
     public GameObject RetRingPrefab;
+    public GameObject DropRing;
+    public GameObject DRPrefab;
     public float ringXPos; //12f to 50f
     public float ringYPos = 3.37f; //constant
     public float ringZPos; //35f to 165f
@@ -39,6 +41,9 @@ public class MissionController : MonoBehaviour
     public bool reviveDone = false;
     public bool ambush;
     public float ambushTime = 0;
+    public bool retrieve;
+    public bool retrieval = false;
+    public bool drop;
     public int missionNum = 0;
 
     void Start()
@@ -108,6 +113,20 @@ public class MissionController : MonoBehaviour
             ambushTime = 0;
             Destroy(ARingPrefab);
             missionNum++;
+        }
+        //"Retrieve"
+        retrieve = pcScript.inRetrieveRing;
+        if (retrieve == true && Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(RetObjPrefab);
+            Destroy(RetRingPrefab);
+            retrieval = true;
+            DRPrefab = Instantiate(DropRing, new Vector3(15.0f, 4.23f, 100.0f), Quaternion.Euler(0, 0, 90));
+        }
+        drop = pcScript.inDropRing; 
+        if (retrieval == true && drop == true && Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Yay");
         }
         
     }

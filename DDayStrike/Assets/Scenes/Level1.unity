@@ -1164,6 +1164,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7764330751560469990, guid: 02db12a3fba135641a9d4109b97b4f7d, type: 3}
   inReviveRing: 0
   inAmbushRing: 0
+  inRetrieveRing: 0
+  inDropRing: 0
 --- !u!4 &317476776
 Transform:
   m_ObjectHideFlags: 0
@@ -1931,6 +1933,8 @@ MonoBehaviour:
   RetObjPrefab: {fileID: 0}
   RetrieveRing: {fileID: 5999489665793217883, guid: 1cdcaa41bb849fb489f30a13d7d651ba, type: 3}
   RetRingPrefab: {fileID: 0}
+  DropRing: {fileID: 6361716246150140096, guid: 11cb10812c1f62f4080fc37f4dc739d9, type: 3}
+  DRPrefab: {fileID: 0}
   ringXPos: 0
   ringYPos: 3.38
   ringZPos: 0
@@ -1952,6 +1956,9 @@ MonoBehaviour:
   reviveDone: 0
   ambush: 0
   ambushTime: 0
+  retrieve: 0
+  retrieval: 0
+  drop: 0
   missionNum: 0
 --- !u!4 &360662970
 Transform:

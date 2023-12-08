@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public bool inReviveRing;
     public bool inAmbushRing;
+    public bool inRetrieveRing;
+    public bool inDropRing;
 
     // Start is called before the first frame update
     void Start()
@@ -118,6 +120,22 @@ public class PlayerController : MonoBehaviour
         } else
         {
             inAmbushRing = false;
+        }
+
+        //"Retrieve"
+        if (collision.gameObject.name == "Retrieve Collider" || collision.gameObject.name == "Retrieve Object(Clone)")
+        {
+            inRetrieveRing = true;
+        } else
+        {
+            inRetrieveRing = false;
+        }
+        if (collision.gameObject.name == "Drop Collider")
+        {
+            inDropRing = true;
+        } else
+        {
+            inDropRing = false;
         }
     }
 
