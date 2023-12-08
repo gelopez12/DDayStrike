@@ -29,6 +29,7 @@ public class MissionController : MonoBehaviour
     public int i;
     public int r;
     public bool revive;
+    public bool reviveDone = false;
     public bool ambush;
     public float ambushTime = 0;
     public int missionNum = 0;
@@ -71,14 +72,17 @@ public class MissionController : MonoBehaviour
 
         //"Revive"
         revive = pcScript.inReviveRing;
-        if (revive == true && Input.GetKeyDown(KeyCode.F))
+        if (!reviveDone)
         {
-            Destroy(RRingPrefab);
-            DPPrefab.transform.Rotate(-90, 0, 0);
-            DPPrefab.transform.position += new Vector3(0, 1, 0);
-            missionNum++;
-        }
-            
+            if (revive == true && Input.GetKeyDown(KeyCode.F))
+            {
+                Destroy(RRingPrefab);
+                DPPrefab.transform.Rotate(-90, 0, 0);
+                DPPrefab.transform.position += new Vector3(0, 1, 0);
+                missionNum++;
+                reviveDone = true;
+            }
+        } 
         //"Ambush"
         ambush = pcScript.inAmbushRing;
         if (ambush == true && ambushTime < 10)
