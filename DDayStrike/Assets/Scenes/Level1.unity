@@ -1927,6 +1927,10 @@ MonoBehaviour:
   AmbushRing: {fileID: 4027860737327822447, guid: 721340246f56f1d47bd99b41fddb838a, type: 3}
   ARingPrefab: {fileID: 0}
   enemyPrefab: {fileID: 1502453525}
+  RetrieveObj: {fileID: 2008235828642882186, guid: 594864eee215d7145b973d63dd6608a5, type: 3}
+  RetObjPrefab: {fileID: 0}
+  RetrieveRing: {fileID: 5999489665793217883, guid: 1cdcaa41bb849fb489f30a13d7d651ba, type: 3}
+  RetRingPrefab: {fileID: 0}
   ringXPos: 0
   ringYPos: 3.38
   ringZPos: 0
@@ -1938,10 +1942,14 @@ MonoBehaviour:
   aRingX: 0
   aRingY: 3.37
   aRingZ: 0
+  retXPos: 0
+  retYPos: 0
+  retZPos: 0
+  retrievePos: {x: 0, y: 0, z: 0}
   a: 0
   i: 0
-  r: 0
   revive: 0
+  reviveDone: 0
   ambush: 0
   ambushTime: 0
   missionNum: 0

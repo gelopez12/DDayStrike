@@ -14,6 +14,10 @@ public class MissionController : MonoBehaviour
     public GameObject AmbushRing;
     public GameObject ARingPrefab;
     public GameObject enemyPrefab;
+    public GameObject RetrieveObj;
+    public GameObject RetObjPrefab;
+    public GameObject RetrieveRing;
+    public GameObject RetRingPrefab;
     public float ringXPos; //12f to 50f
     public float ringYPos = 3.37f; //constant
     public float ringZPos; //35f to 165f
@@ -25,9 +29,12 @@ public class MissionController : MonoBehaviour
     public float aRingX; //45f to 52f
     public float aRingY; // 3.37f
     public float aRingZ; //40f to 90f
+    public float retXPos; // 30f to 50f
+    public float retYPos; // 
+    public float retZPos; //160f to 170f
+    public Vector3 retrievePos;
     public float a;
     public int i;
-    public int r;
     public bool revive;
     public bool reviveDone = false;
     public bool ambush;
@@ -38,9 +45,7 @@ public class MissionController : MonoBehaviour
     {
         pcScript = player.GetComponent<PlayerController>();
         //a = 25.0f;
-        //Testing Ring Spawn
-        //ringSpawnPos = new Vector3(Random.Range(12.0f, 50.0f), ringYPos, Random.Range(35.0f, 165.0f));
-        //Instantiate(Ring, ringSpawnPos, Quaternion.Euler(0,0,90));
+
 
         //"Revive"
         downXPos = 8.0f;
@@ -63,6 +68,15 @@ public class MissionController : MonoBehaviour
             aRingZ = Random.Range((aRingZ - 1.5f), (aRingZ + 1.5f));
             Instantiate(enemyPrefab, new Vector3(aRingX, aRingY + 2.0f, aRingZ), Quaternion.identity);
         }
+
+        //"Retrieve"
+        retXPos = Random.Range(30.0f, 50.0f);
+        retYPos = 4.77f;
+        retZPos = Random.Range(160.0f, 170.0f);
+        retrievePos = new Vector3(retXPos, retYPos, retZPos);
+        ringSpawnPos = new Vector3(retXPos, 4.23f, retZPos);
+        RetObjPrefab = Instantiate(RetrieveObj, retrievePos, Quaternion.identity);
+        RetRingPrefab = Instantiate(RetrieveRing, ringSpawnPos, Quaternion.Euler(0, 0, 90));
     }
 
     // Update is called once per frame
