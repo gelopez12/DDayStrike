@@ -20,9 +20,6 @@ public class MissionController : MonoBehaviour
     public GameObject RetRingPrefab;
     public GameObject DropRing;
     public GameObject DRPrefab;
-    public float ringXPos; //12f to 50f
-    public float ringYPos = 3.37f; //constant
-    public float ringZPos; //35f to 165f
     public Vector3 ringSpawnPos;
     public float downXPos;
     public float downYPos;
@@ -126,7 +123,8 @@ public class MissionController : MonoBehaviour
         drop = pcScript.inDropRing; 
         if (retrieval == true && drop == true && Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log("Yay");
+            Destroy(DRPrefab);
+            missionNum++;
         }
         
     }
