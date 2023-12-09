@@ -6610,7 +6610,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c13206abf7664cf40a9b9f8fb897157b, type: 2}
+  - {fileID: 2100000, guid: e006bfed337b4bf9a8fafe2d5261f792, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7013,7 +7013,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c13206abf7664cf40a9b9f8fb897157b, type: 2}
+  - {fileID: 2100000, guid: e006bfed337b4bf9a8fafe2d5261f792, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16399,7 +16399,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c13206abf7664cf40a9b9f8fb897157b, type: 2}
+  - {fileID: 2100000, guid: e006bfed337b4bf9a8fafe2d5261f792, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17398,6 +17398,63 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1068806910}
   m_SourcePrefab: {fileID: 100100000, guid: 922e76be85b6e024a9e02f734038fd29, type: 3}
+--- !u!1001 &5647587552870234778
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1794185300699834410, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 118.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794185300699834410, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794185300699834410, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 158
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794185300699834410, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.97992474
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794185300699834410, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794185300699834410, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.19936797
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794185300699834410, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794185300699834410, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794185300699834410, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1794185300699834410, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612020679399550354, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+      propertyPath: m_Name
+      value: Bunker Door
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
 --- !u!1001 &6556838394225946837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17538,3 +17595,4 @@ SceneRoots:
   - {fileID: 956231898}
   - {fileID: 772195581}
   - {fileID: 361259590}
+  - {fileID: 5647587552870234778}
