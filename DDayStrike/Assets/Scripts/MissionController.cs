@@ -25,6 +25,7 @@ public class MissionController : MonoBehaviour
     public GameObject BangWire;
     public GameObject BWPrefab;
     public Vector3 ringSpawnPos;
+    public GameObject BunkerDoor;
     public float downXPos;
     public float downYPos;
     public float downZPos;
@@ -41,23 +42,34 @@ public class MissionController : MonoBehaviour
     public float eRingY;
     public float eRingZ;
     public float a;
+    public int num;
     public int i;
     public bool revive;
     public bool reviveDone = false;
     public bool ambush;
+    public bool ambushDone = false;
     public float ambushTime = 0;
     public bool retrieve;
     public bool retrieval = false;
+    public bool retrieveDone = false;
     public bool drop;
+    public bool dropDone = false;
     public bool escort;
     public bool escortDone = false;
+    public bool boom = false;
+    public bool door = false;
     public float bangTime = 0;
     public int missionNum = 0;
+    public bool lvl2Access = false;
+    private Vector3 door1 = new Vector3(118.5f, 16f, 158f);
+    private Vector3 door2 = new Vector3(115.8f, 16f, 92f);
+    private Vector3 door3 = new Vector3(124f, 16f, 39.27f);
 
     void Start()
     {
         pcScript = player.GetComponent<PlayerController>();
         BWPrefab = Instantiate(BangWire, new Vector3(71.7f, 4.4f, 100f), Quaternion.Euler(0, 90, 0));
+        
         //a = 25.0f;
 
 
@@ -90,6 +102,21 @@ public class MissionController : MonoBehaviour
         eRingX = 9.4f;
         eRingY = 3.38f;
         eRingZ = 100f;
+
+        //Door Spawn
+        num = Random.Range(1, 4);
+        if (num == 1)
+        {
+            Instantiate(BunkerDoor, door1, Quaternion.Euler(0, -23, 0));
+        }
+        else if (num == 2)
+        {
+            Instantiate(BunkerDoor, door2, Quaternion.Euler(0, -2, 0));
+        }
+        else
+        {
+            Instantiate(BunkerDoor, door3, Quaternion.Euler(0, -167, 0));
+        }
     }
 
     // Update is called once per frame
@@ -125,6 +152,7 @@ public class MissionController : MonoBehaviour
         }
         if (ambushTime >= 10)
         {
+            ambushDone = true;
             ambushTime = 0;
             Destroy(ARingPrefab);
             missionNum++;
@@ -135,12 +163,14 @@ public class MissionController : MonoBehaviour
         {
             Destroy(RetObjPrefab);
             Destroy(RetRingPrefab);
+            retrieveDone = true;
             retrieval = true;
             DRPrefab = Instantiate(DropRing, new Vector3(15.0f, 4.23f, 100.0f), Quaternion.Euler(0, 0, 90));
         }
         drop = pcScript.inDropRing; 
         if (retrieval == true && drop == true && Input.GetKeyDown(KeyCode.F))
         {
+            dropDone = true;
             Destroy(DRPrefab);
             missionNum++;
         }
@@ -167,8 +197,15 @@ public class MissionController : MonoBehaviour
                 Destroy(ERingPrefab);
                 Destroy(BWPrefab);
                 bangTime = 0;
+                boom = true;
             }
             bangTime += Time.deltaTime;
+        }
+        //Door
+        door = pcScript.doorTouch;
+        if (door == true && boom == true && Input.GetKeyDown(KeyCode.F))
+        {
+            lvl2Access = true;
         }
 
     }
