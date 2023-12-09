@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    MissionController mcScript;
+    public GameObject mc;
     public float minX = 0f;
     public float maxX = 135f;
     public float minZ = 28f;
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("");
         animator = GetComponent<Animator>();
+        mcScript = mc.GetComponent<MissionController>();
     }
 
     // Update is called once per frame
