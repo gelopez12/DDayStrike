@@ -2391,7 +2391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1fa2c167cfa949438fad9fd516c4c5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 10
   HitSource: {fileID: 317476786}
 --- !u!82 &317476783
 AudioSource:
@@ -9838,6 +9838,7 @@ MonoBehaviour:
   mc: {fileID: 360662968}
   sceneName: Level2
   lvl2: 0
+  LevelRespawn: 1
 --- !u!114 &1259152722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9873,7 +9874,6 @@ MonoBehaviour:
   dropRing: 0
   ambushRing: 0
   escortRing: 0
-  defendRing: 0
   atDoor: 0
 --- !u!1001 &1288805169
 PrefabInstance:

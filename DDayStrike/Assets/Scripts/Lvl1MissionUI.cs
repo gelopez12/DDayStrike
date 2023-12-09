@@ -117,7 +117,7 @@ public class Lvl1MissionUI : MonoBehaviour
         }  else if (atDoor)
         {
             promptTextObj.SetActive(true);
-            promptText.text = "Enter the Bunker";
+            promptText.text = "Press [F] to Enter the Bunker";
         } else
         {
             promptTextObj.SetActive(false);
