@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float minX = 0f;
-    public float maxX = 118f;
+    public float maxX = 135f;
     public float minZ = 28f;
     public float maxZ = 172f;
     public float speed = 10.0f;
@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public bool inRetrieveRing;
     public bool inDropRing;
     public bool inEscortRing;
+    public bool doorTouch;
 
     // Start is called before the first frame update
     void Start()
@@ -137,6 +138,15 @@ public class PlayerController : MonoBehaviour
         } else
         {
             inDropRing = false;
+        }
+
+        //Door
+        if (collision.gameObject.name == "Bunker Door(Clone)")
+        {
+            doorTouch = true;
+        } else
+        {
+            doorTouch = false;
         }
     }
 
