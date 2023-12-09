@@ -1277,6 +1277,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeadScreen: {fileID: 2099279236}
+  RIP: {fileID: 2099279235}
+  RespawnLv: 0
 --- !u!4 &2099279238
 Transform:
   m_ObjectHideFlags: 0

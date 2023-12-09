@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     public GameObject mc;
     public string sceneName;
     public bool lvl2 = false;
-    public int LevelRespawn = 1;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour
         if (lvl2 == true)
         {
             SceneManager.LoadScene(sceneName);
-            LevelRespawn = 2;
+            
         }
     }
 

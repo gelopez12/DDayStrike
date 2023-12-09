@@ -7815,6 +7815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   HitSource: {fileID: 727447868}
+  SceneIndex: 0
 --- !u!54 &727447873
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7912,6 +7913,7 @@ MonoBehaviour:
   inRetrieveRing: 0
   inDropRing: 0
   inEscortRing: 0
+  doorTouch: 0
 --- !u!95 &727447877
 Animator:
   serializedVersion: 7
@@ -8774,6 +8776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1050015445}
   - component: {fileID: 1050015446}
+  - component: {fileID: 1050015448}
   m_Layer: 0
   m_Name: MissionSpawn
   m_TagString: Untagged
@@ -8825,6 +8828,19 @@ MonoBehaviour:
   - {fileID: 1303303108}
   numberOfEnemies: 4
   spawnInterval: 7
+--- !u!114 &1050015448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050015444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd63ab1214c2a14468753da75870460f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeadScreen: {fileID: 0}
 --- !u!1 &1051672900
 GameObject:
   m_ObjectHideFlags: 0
