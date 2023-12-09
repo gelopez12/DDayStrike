@@ -14,6 +14,11 @@ TagManager:
   - wehrmacht_a
   - Ring
   - Revive Ring
+  - Pickup
+  - Clipboard
+  - Keys
+  - Radio
+  - AmmoBox
   layers:
   - Default
   - TransparentFX
