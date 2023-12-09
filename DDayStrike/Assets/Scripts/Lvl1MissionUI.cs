@@ -15,10 +15,14 @@ public class Lvl1MissionUI : MonoBehaviour
     public Text retrieveText;
     public Text ambushText;
     public Text escortText;
+    public Text defendText;
+    public Text findText;
     public bool revive = false;
     public bool retrieve = false;
     public bool drop = false;
     public bool ambush = false;
+    public bool escort = false;
+    public bool defend = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +37,8 @@ public class Lvl1MissionUI : MonoBehaviour
         retrieve = mcScript.retrieveDone;
         drop = mcScript.dropDone;
         ambush = mcScript.ambushDone;
+        escort = mcScript.escortDone;
+        defend = mcScript.boom;
 
         if (revive)
         {
@@ -56,6 +62,14 @@ public class Lvl1MissionUI : MonoBehaviour
             firstMissions.SetActive(false);
             escortMissions.SetActive(true);
             ambush = false;
+        }
+        if (escort)
+        {
+            escortText.color = Color.green;
+        }
+        if (defend)
+        {
+            defendText.color = Color.green;
         }
     }
 }
