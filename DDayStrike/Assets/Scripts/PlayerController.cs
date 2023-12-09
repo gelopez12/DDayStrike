@@ -138,12 +138,21 @@ public class PlayerController : MonoBehaviour
         {
             inDropRing = false;
         }
+    }
 
-        //"Escort"
+    public void OnCollisionEnter(Collision collision)
+    {
+        //"Escort/Bangalore"
         if (collision.gameObject.name == "Escort Collider")
         {
             inEscortRing = true;
-        } else
+        }
+    }
+
+    public void OnCollisionExit(Collision collision)
+    {
+        //"Escort/Bangalore"
+        if (collision.gameObject.name == "Escort Collider")
         {
             inEscortRing = false;
         }

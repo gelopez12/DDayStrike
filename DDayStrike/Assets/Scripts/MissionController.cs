@@ -22,6 +22,8 @@ public class MissionController : MonoBehaviour
     public GameObject DRPrefab;
     public GameObject EscortRing;
     public GameObject ERingPrefab;
+    public GameObject BangWire;
+    public GameObject BWPrefab;
     public Vector3 ringSpawnPos;
     public float downXPos;
     public float downYPos;
@@ -48,11 +50,14 @@ public class MissionController : MonoBehaviour
     public bool retrieval = false;
     public bool drop;
     public bool escort;
+    public bool escortDone = false;
+    public float bangTime = 0;
     public int missionNum = 0;
 
     void Start()
     {
         pcScript = player.GetComponent<PlayerController>();
+        BWPrefab = Instantiate(BangWire, new Vector3(71.7f, 4.4f, 100f), Quaternion.Euler(0, 90, 0));
         //a = 25.0f;
 
 
@@ -146,10 +151,25 @@ public class MissionController : MonoBehaviour
             missionNum = 0;
             ERingPrefab = Instantiate(EscortRing, new Vector3(9.4f, 3.38f, 100f), Quaternion.Euler(0, 0, 90));
         }
-        if (escort == true)
+        if (escort == true && !escortDone )
         {
             eRingX = eRingX + .01f;
             ERingPrefab.transform.position = new Vector3(eRingX, eRingY, eRingZ);
         }
+        if (eRingX >= 67.0f)
+        {
+            escortDone = true;
+        }
+        if (escort == true && escortDone == true)
+        {
+            if (bangTime >= 30.0f)
+            {
+                Destroy(ERingPrefab);
+                Destroy(BWPrefab);
+                bangTime = 0;
+            }
+            bangTime += Time.deltaTime;
+        }
+
     }
 }
