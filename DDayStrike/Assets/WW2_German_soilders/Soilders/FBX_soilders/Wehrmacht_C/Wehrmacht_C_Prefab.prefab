@@ -40,7 +40,7 @@ Transform:
   m_Children:
   - {fileID: 4416771142398746}
   - {fileID: 6809802164646228635}
-  - {fileID: 4287797004490893350}
+  - {fileID: 8091984880742021639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7117263902237725886
@@ -2366,7 +2366,7 @@ Transform:
   - {fileID: 4616944457645406}
   m_Father: {fileID: 4517967466835204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6939496349209915817
+--- !u!1 &7996178331867091624
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2374,8 +2374,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4287797004490893350}
-  - component: {fileID: 8732111862122699852}
+  - component: {fileID: 6809802164646228635}
+  m_Layer: 0
+  m_Name: Firepo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6809802164646228635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996178331867091624}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.211, y: 1.02, z: 1.487}
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4031854754943992}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9203752401324156570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8091984880742021639}
+  - component: {fileID: 1549927760852230346}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -2383,28 +2414,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4287797004490893350
+--- !u!4 &8091984880742021639
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6939496349209915817}
+  m_GameObject: {fileID: 9203752401324156570}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18301275, y: 0.6830127, z: -0.18301275, w: 0.6830127}
-  m_LocalPosition: {x: -31.444447, y: 0.59000015, z: -10.669285}
-  m_LocalScale: {x: 0.7407408, y: 1.0150068, z: 0.7183841}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalPosition: {x: 0.17, y: -0.61, z: 0.66}
+  m_LocalScale: {x: 0.74074066, y: 0.82960796, z: 0.8736587}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4031854754943992}
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
---- !u!108 &8732111862122699852
+--- !u!108 &1549927760852230346
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6939496349209915817}
+  m_GameObject: {fileID: 9203752401324156570}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 0
@@ -2422,7 +2453,7 @@ Light:
     m_Strength: 1
     m_Bias: 0
     m_NormalBias: 0
-    m_NearPlane: 0.099999994
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -2460,34 +2491,3 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &7996178331867091624
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6809802164646228635}
-  m_Layer: 0
-  m_Name: Firepo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6809802164646228635
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7996178331867091624}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.211, y: 1.02, z: 1.487}
-  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4031854754943992}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
