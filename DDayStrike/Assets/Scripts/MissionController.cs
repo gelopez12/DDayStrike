@@ -116,7 +116,7 @@ public class MissionController : MonoBehaviour
         {
             if (ambushTime < .075f)
             {
-                aRingX = aRingX + 5.0f; //Random.Range((aRingX + 5.0f), (aRingX + 10.0f));
+                aRingX = aRingX + 5.0f;
                 aRingZ = Random.Range((aRingZ - 4.0f), (aRingZ + 4.0f));
                 Instantiate(enemyPrefab, new Vector3(aRingX, aRingY + 2.0f, aRingZ), Quaternion.identity);
                 aRingX = aRingX - 5.0f;
