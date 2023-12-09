@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using TMPro;
 using UnityEngine;
 
@@ -8,12 +9,13 @@ public class Level2 : MonoBehaviour
     public GameObject Keys;
     public GameObject Clipboard;
     public GameObject Radio;
-    public GameObject AmmoBox;
+    public GameObject AmmoBox;  
 
     public TextMeshProUGUI keysText;
     public TextMeshProUGUI clipboardText;
     public TextMeshProUGUI radioText;
     public TextMeshProUGUI ammoBoxText;
+    public int Count = 0; 
 
     public GameObject finalObject; // The object that appears when all items are picked up
     public GameObject Prompt; // The object that appears and disappears
@@ -51,12 +53,14 @@ public class Level2 : MonoBehaviour
                 currentPickup = null;
             }
         }
+        
     }
 
     void PickUpObject(GameObject pickupObject)
     {
         if (pickupObject.activeSelf) // Check if the object is still active (not picked up)
         {
+            Count++;
             pickupObject.SetActive(false);
             Debug.Log("Picked up: " + pickupObject.name);
 
@@ -69,6 +73,7 @@ public class Level2 : MonoBehaviour
             // Check if all items are picked up
             CheckForCompletion();
         }
+        
     }
 
     void UpdateTextColor(string tag, Color color)
@@ -101,18 +106,19 @@ public class Level2 : MonoBehaviour
     void CheckForCompletion()
     {
         // Check if all items are picked up
-        if (!Keys.activeSelf && !Clipboard.activeSelf && !Radio.activeSelf && !AmmoBox.activeSelf)
+        if (Count == 4)
         {
-            ActivateFinalObject();
+           // ActivateFinalObject();
+            finalObject.SetActive(true);
+            Debug.Log("IT worked");
         }
     }
 
-    void ActivateFinalObject()
+    /*void ActivateFinalObject()
     {
-        if (finalObject != null)
-        {
-            finalObject.SetActive(true);
-            Debug.Log("Final object activated!");
-        }
-    }
+        if (!finalObject.activeSelf) 
+        { 
+            
+            Debug.Log("Final object activated!");       
+        }*/
 }
