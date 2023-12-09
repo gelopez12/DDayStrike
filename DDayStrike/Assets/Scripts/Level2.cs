@@ -114,11 +114,4 @@ public class Level2 : MonoBehaviour
         }
     }
 
-    /*void ActivateFinalObject()
-    {
-        if (!finalObject.activeSelf) 
-        { 
-            
-            Debug.Log("Final object activated!");       
-        }*/
 }
