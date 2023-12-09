@@ -6,21 +6,32 @@ using UnityEngine.SceneManagement;
 public class DeadScript : MonoBehaviour
 {
     public AudioSource DeadScreen;
+    LevelManager Respawn;
+    //public GameObject RIP;
+    public int RespawnLv;
     // Start is called before the first frame update
     void Start()
     {
         DeadScreen.Play();
-        
+        Respawn = GetComponent<LevelManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        RespawnLv = Respawn.LevelRespawn;
         // Check for the space bar input
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Load the "Level1" scene
-            SceneManager.LoadScene("Level1");
+            if (RespawnLv == 1)
+            {
+                SceneManager.LoadScene("Level1");
+            }
+            else if(RespawnLv == 2)
+            {
+                SceneManager.LoadScene("Level2");
+            }
         } else if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("HomeScreen");

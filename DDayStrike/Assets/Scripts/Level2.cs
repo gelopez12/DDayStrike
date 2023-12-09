@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Level2 : MonoBehaviour
@@ -9,46 +10,109 @@ public class Level2 : MonoBehaviour
     public GameObject Radio;
     public GameObject AmmoBox;
 
-    private GameObject currentPickup; // To store the current pickup object
+    public TextMeshProUGUI keysText;
+    public TextMeshProUGUI clipboardText;
+    public TextMeshProUGUI radioText;
+    public TextMeshProUGUI ammoBoxText;
 
-    // Update is called once per frame
+    public GameObject finalObject; // The object that appears when all items are picked up
+    public GameObject Prompt; // The object that appears and disappears
+
+    private GameObject currentPickup;
+
     void Update()
     {
-        // Check for object pickup input
         if (Input.GetKeyDown(KeyCode.F) && currentPickup != null)
         {
             PickUpObject(currentPickup);
         }
+
+        CheckForNearbyPickups();
     }
 
-    // OnTriggerEnter is called when the Collider other enters the trigger
-    void OnTriggerEnter(Collider other)
+    void CheckForNearbyPickups()
     {
-        // Check if the collided object is a pickup object
-        if (other.CompareTag("Keys") || other.CompareTag("Clipboard") || other.CompareTag("Radio") || other.CompareTag("AmmoBox"))
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 2f);
+
+        foreach (Collider collider in colliders)
         {
-            currentPickup = other.gameObject;
-            Debug.Log("Near pickup object: " + currentPickup.name);
+            if (collider.CompareTag("Keys") || collider.CompareTag("Clipboard") || collider.CompareTag("Radio") || collider.CompareTag("AmmoBox"))
+            {
+                // Show the prompt when nearby the item
+                Prompt.SetActive(true);
+
+                currentPickup = collider.gameObject;
+                break;
+            }
+            else
+            {
+                // Hide the prompt when not near any item
+                Prompt.SetActive(false);
+                currentPickup = null;
+            }
         }
     }
 
-    // OnTriggerExit is called when the Collider other has stopped touching the trigger
-    void OnTriggerExit(Collider other)
-    {
-        // Check if the exited object is the current pickup object
-        if (other.gameObject == currentPickup)
-        {
-            currentPickup = null;
-            Debug.Log("Left pickup object");
-        }
-    }
-
-    // Method to handle object pickup
     void PickUpObject(GameObject pickupObject)
     {
-        // Implement your pickup logic here
-        // For example, you can deactivate the pickup object
-        pickupObject.SetActive(false);
-        Debug.Log("Picked up: " + pickupObject.name);
+        if (pickupObject.activeSelf) // Check if the object is still active (not picked up)
+        {
+            pickupObject.SetActive(false);
+            Debug.Log("Picked up: " + pickupObject.name);
+
+            // Hide the prompt after picking up the item
+            Prompt.SetActive(false);
+
+            // Update the TextMeshPro color when picking up an item
+            UpdateTextColor(pickupObject.tag, Color.green);
+
+            // Check if all items are picked up
+            CheckForCompletion();
+        }
+    }
+
+    void UpdateTextColor(string tag, Color color)
+    {
+        TextMeshProUGUI textMeshPro = GetTextMeshProByTag(tag);
+
+        if (textMeshPro != null)
+        {
+            textMeshPro.color = color;
+        }
+    }
+
+    TextMeshProUGUI GetTextMeshProByTag(string tag)
+    {
+        switch (tag)
+        {
+            case "Keys":
+                return keysText;
+            case "Clipboard":
+                return clipboardText;
+            case "Radio":
+                return radioText;
+            case "AmmoBox":
+                return ammoBoxText;
+            default:
+                return null;
+        }
+    }
+
+    void CheckForCompletion()
+    {
+        // Check if all items are picked up
+        if (!Keys.activeSelf && !Clipboard.activeSelf && !Radio.activeSelf && !AmmoBox.activeSelf)
+        {
+            ActivateFinalObject();
+        }
+    }
+
+    void ActivateFinalObject()
+    {
+        if (finalObject != null)
+        {
+            finalObject.SetActive(true);
+            Debug.Log("Final object activated!");
+        }
     }
 }
