@@ -5,22 +5,34 @@ using UnityEngine;
 public class MSpawn2 : MonoBehaviour
 {
     public GameObject[] prefabs;
-    public GameObject enemyPrefab;  
-    public Transform[] spawnPoints;  
+    public GameObject enemyPrefab;
+    public Transform[] spawnPoints;
+
+    public int numberOfEnemies = 5;
+    public float spawnInterval = 3f; // Adjust this value for the time between enemy spawns
 
     private bool hasSpawned = false;
 
-    public int numberOfEnemies = 5;
-
     void Start()
     {
-        SpawnPrefabsOnce();
-        SpawnEnemies();
+        StartCoroutine(SpawnEnemiesWithInterval());
     }
 
     void Update()
     {
-       
+        // Your update logic here
+    }
+
+    IEnumerator SpawnEnemiesWithInterval()
+    {
+        SpawnPrefabsOnce();
+
+        while (true)
+        {
+            yield return new WaitForSeconds(spawnInterval);
+
+            SpawnEnemies();
+        }
     }
 
     void SpawnPrefabsOnce()
@@ -51,20 +63,22 @@ public class MSpawn2 : MonoBehaviour
 
     void SpawnEnemies()
     {
-        for (int i = 0; i < numberOfEnemies; i++)
+        // Shuffle the spawn points array for each enemy spawn
+        System.Random rng = new System.Random();
+        int n = spawnPoints.Length;
+        while (n > 1)
         {
-            // Randomly select a spawn point
-            Transform spawnPoint = GetRandomSpawnPoint();
-
-            // Spawn an enemy at the selected spawn point
-            Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+            n--;
+            int k = rng.Next(n + 1);
+            Transform value = spawnPoints[k];
+            spawnPoints[k] = spawnPoints[n];
+            spawnPoints[n] = value;
         }
-    }
 
-    Transform GetRandomSpawnPoint()
-    {
-        // Randomly select a spawn point from the array
-        int randomIndex = Random.Range(0, spawnPoints.Length);
-        return spawnPoints[randomIndex];
+        // Randomly select a spawn point for the current enemy spawn
+        Transform spawnPoint = spawnPoints[0]; // Use spawnPoints[0] since the array is shuffled
+
+        // Spawn an enemy at the selected spawn point
+        Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
     }
 }

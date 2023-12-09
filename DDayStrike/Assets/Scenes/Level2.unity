@@ -7358,6 +7358,7 @@ MonoBehaviour:
   inAmbushRing: 0
   inRetrieveRing: 0
   inDropRing: 0
+  inEscortRing: 0
 --- !u!95 &727447877
 Animator:
   serializedVersion: 7
@@ -8119,6 +8120,7 @@ MonoBehaviour:
   - {fileID: 128974251}
   - {fileID: 1303303108}
   numberOfEnemies: 4
+  spawnInterval: 7
 --- !u!1 &1051672900
 GameObject:
   m_ObjectHideFlags: 0
