@@ -19,6 +19,7 @@ TagManager:
   - Keys
   - Radio
   - AmmoBox
+  - Coin
   layers:
   - Default
   - TransparentFX
