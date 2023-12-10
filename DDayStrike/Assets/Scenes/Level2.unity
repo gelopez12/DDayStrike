@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000017304897, g: 0.000000027576512, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10074,6 +10074,7 @@ MonoBehaviour:
   inDropRing: 0
   inEscortRing: 0
   doorTouch: 0
+  landmineTouch: 0
 --- !u!95 &727447877
 Animator:
   serializedVersion: 7
@@ -10945,7 +10946,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979335011}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -12913,6 +12914,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3051236115245644606}
     m_Modifications:
+    - target: {fileID: 3031033728695234910, guid: 17ddea0d359b8954bbe50ab9a9a735b0, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031033728695234910, guid: 17ddea0d359b8954bbe50ab9a9a735b0, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3440391892200685838, guid: 17ddea0d359b8954bbe50ab9a9a735b0, type: 3}
       propertyPath: m_Name
       value: Capsule (6)
