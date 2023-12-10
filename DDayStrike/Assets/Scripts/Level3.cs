@@ -70,9 +70,23 @@ public class Level3 : MonoBehaviour
         enemyPrefab = Instantiate(enemy, new Vector3(148f, 10.1f, 88f), Quaternion.identity);
         enemyPrefab = Instantiate(enemy, new Vector3(160f, 10.1f, 91f), Quaternion.identity);
         enemyPrefab = Instantiate(enemy, new Vector3(153f, 10.1f, 87f), Quaternion.identity);
-
-
-        landminePrefab = Instantiate(landmine, new Vector3(26f, 10.1f, 75f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(166f, 10.1f, 83f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(162f, 10.1f, 74f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(158f, 10.1f, 68f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(166f, 10.1f, 66f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(173f, 10.1f, 76f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(179f, 10.1f, 82f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(182f, 10.1f, 76f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(179f, 10.1f, 69f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(172f, 10.1f, 80f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(174f, 10.1f, 89f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(184f, 10.1f, 87f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(190f, 10.1f, 83f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(190f, 10.1f, 67f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(221f, 10.1f, 88f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(237f, 10.1f, 91f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(237f, 10.1f, 79f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(237f, 10.1f, 66f), Quaternion.identity);
     }
 
     // Update is called once per frame
