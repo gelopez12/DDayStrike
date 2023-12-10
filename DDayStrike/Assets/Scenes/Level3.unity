@@ -2963,7 +2963,6 @@ GameObject:
   - component: {fileID: 684846134}
   - component: {fileID: 684846133}
   - component: {fileID: 684846132}
-  - component: {fileID: 684846131}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: Player
@@ -2971,29 +2970,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &684846131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 684846130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f186314be0e95b943b3e669564705fe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Keys: {fileID: 0}
-  Clipboard: {fileID: 0}
-  Radio: {fileID: 0}
-  AmmoBox: {fileID: 0}
-  keysText: {fileID: 0}
-  clipboardText: {fileID: 0}
-  radioText: {fileID: 0}
-  ammoBoxText: {fileID: 0}
-  Count: 0
-  finalObject: {fileID: 0}
-  Prompt: {fileID: 0}
 --- !u!82 &684846132
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10781,7 +10757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1219407786
 Transform:
   m_ObjectHideFlags: 0
