@@ -87,6 +87,24 @@ public class Level3 : MonoBehaviour
         enemyPrefab = Instantiate(enemy, new Vector3(237f, 10.1f, 91f), Quaternion.identity);
         enemyPrefab = Instantiate(enemy, new Vector3(237f, 10.1f, 79f), Quaternion.identity);
         enemyPrefab = Instantiate(enemy, new Vector3(237f, 10.1f, 66f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(244f, 10.1f, 74f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(244f, 10.1f, 85f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(304f, 10.1f, 75f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(304f, 10.1f, 77f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(304f, 10.1f, 79f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(304f, 10.1f, 90f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(300f, 10.1f, 67f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(276f, 10.1f, 67f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(276f, 10.1f, 76f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(276f, 10.1f, 82f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(276f, 10.1f, 91f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(267f, 10.1f, 82f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(262f, 10.1f, 70f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(254f, 10.1f, 67f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(254f, 10.1f, 78f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(254f, 10.1f, 90f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(254f, 10.1f, 85f), Quaternion.identity);
+
     }
 
     // Update is called once per frame
