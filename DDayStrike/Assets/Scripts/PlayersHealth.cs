@@ -19,7 +19,7 @@ public class PlayersHealth : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Bullet") || collision.gameObject.CompareTag("Bullet3"))
         {
             currentHealth--;
             HitSource.Play();
@@ -28,7 +28,6 @@ public class PlayersHealth : MonoBehaviour
         {
             currentHealth -= 1000;
         }
-
         if (currentHealth <= 0)
         {
             GameOver();

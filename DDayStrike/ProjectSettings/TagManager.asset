@@ -21,6 +21,7 @@ TagManager:
   - AmmoBox
   - Coin
   - Landmine
+  - Bullet3
   layers:
   - Default
   - TransparentFX

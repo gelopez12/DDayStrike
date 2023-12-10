@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public GameObject bullet3Prefab;
     public int maxHealth = 1; 
-
     private int currentHealth; 
 
     void Start()
@@ -19,7 +19,6 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             currentHealth--;
-
             if (currentHealth <= 0)
             {
                 //EnemySpawner.OnEnemyKilled?.Invoke();

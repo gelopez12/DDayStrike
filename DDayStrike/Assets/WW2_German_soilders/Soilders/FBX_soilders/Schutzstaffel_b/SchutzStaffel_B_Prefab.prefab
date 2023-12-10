@@ -699,9 +699,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9eb5b22b849c9b44a26930e9da9c02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 7764330751560469990, guid: 02db12a3fba135641a9d4109b97b4f7d, type: 3}
+  projectilePrefab: {fileID: 69411221977071263, guid: d4eca37cde0321a4484c7c3c1b50330a, type: 3}
   firePoint: {fileID: 2172044453880522419}
-  shootInterval: 0.4
+  shootInterval: 0.3
   projectileSpeed: 50
   shootingRange: 20
   EnShoot: {fileID: 6443217569963365606}
@@ -826,6 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc91ac4cc9b65d42ba83de3aed11bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet3Prefab: {fileID: 69411221977071263, guid: d4eca37cde0321a4484c7c3c1b50330a, type: 3}
   maxHealth: 1
 --- !u!1 &1443967754114076
 GameObject:
