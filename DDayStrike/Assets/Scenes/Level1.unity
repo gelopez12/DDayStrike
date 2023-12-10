@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589245, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2483,6 +2483,7 @@ MonoBehaviour:
   inRetrieveRing: 0
   inDropRing: 0
   inEscortRing: 0
+  defendTime: 0
   doorTouch: 0
   landmineTouch: 0
 --- !u!4 &317476776
@@ -3186,6 +3187,8 @@ MonoBehaviour:
   BWPrefab: {fileID: 0}
   ringSpawnPos: {x: 0, y: 0, z: 0}
   BunkerDoor: {fileID: 4612020679399550354, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+  toEscort: {fileID: 2543698980745297596, guid: 102cbc8285c5dbf41a24319126120d77, type: 3}
+  toEscortPrefab: {fileID: 0}
   downXPos: 0
   downYPos: 0
   downZPos: 0

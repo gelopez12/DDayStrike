@@ -26,6 +26,8 @@ public class MissionController : MonoBehaviour
     public GameObject BWPrefab;
     public Vector3 ringSpawnPos;
     public GameObject BunkerDoor;
+    public GameObject toEscort;
+    public GameObject toEscortPrefab;
     public float downXPos;
     public float downYPos;
     public float downZPos;
@@ -185,11 +187,13 @@ public class MissionController : MonoBehaviour
         {
             missionNum = 0;
             ERingPrefab = Instantiate(EscortRing, new Vector3(9.4f, 3.38f, 100f), Quaternion.Euler(0, 0, 90));
+            toEscortPrefab = Instantiate(toEscort, new Vector3(9.4f, 5f, 100f), Quaternion.identity);
         }
         if (escort == true && !escortDone )
         {
             eRingX = eRingX + .01f;
             ERingPrefab.transform.position = new Vector3(eRingX, eRingY, eRingZ);
+            toEscortPrefab.transform.position = new Vector3(eRingX, 5f, eRingZ);
         }
         if (eRingX >= 67.0f)
         {
@@ -203,6 +207,7 @@ public class MissionController : MonoBehaviour
                 Destroy(BWPrefab);
                 boom = true;
                 escort = false;
+                bangTime = 0;
             } else if (bangTime <= 30.0f && !boom)
             {
                 bangTime += Time.deltaTime;
