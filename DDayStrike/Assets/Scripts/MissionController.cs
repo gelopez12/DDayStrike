@@ -192,14 +192,17 @@ public class MissionController : MonoBehaviour
         }
         if (escort == true && escortDone == true)
         {
-            if (bangTime >= 30.0f)
+            if (bangTime <= 30.0f && !boom)
+            {
+                bangTime += Time.deltaTime;
+            } else if (bangTime >= 30.0f)
             {
                 Destroy(ERingPrefab);
                 Destroy(BWPrefab);
-                bangTime = 0;
                 boom = true;
+                escort = false;
+                bangTime = 0;
             }
-            bangTime += Time.deltaTime;
         }
         //Door
         door = pcScript.doorTouch;

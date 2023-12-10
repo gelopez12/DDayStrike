@@ -14,6 +14,7 @@ public class Lvl1MissionUI : MonoBehaviour
     public GameObject firstMissions;
     public GameObject escortMissions;
     public GameObject promptTextObj;
+    public GameObject percentTextObj;
     public Text reviveText;
     public Text retrieveText;
     public Text ambushText;
@@ -21,6 +22,7 @@ public class Lvl1MissionUI : MonoBehaviour
     public Text defendText;
     public Text findText;
     public Text promptText;
+    public Text percentText;
     public bool revive = false;
     public bool retrieve = false;
     public bool drop = false;
@@ -33,6 +35,8 @@ public class Lvl1MissionUI : MonoBehaviour
     public bool ambushRing = false;
     public bool escortRing = false;
     public bool atDoor = false;
+    public float aPercent;
+    public float dPercent;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +63,8 @@ public class Lvl1MissionUI : MonoBehaviour
         ambushRing = pcScript.inAmbushRing;
         escortRing = pcScript.inEscortRing;
         atDoor = pcScript.doorTouch;
+        aPercent = mcScript.ambushTime;
+        dPercent = mcScript.bangTime;
 
         //Green Text and Change Missions
         if (revive)
@@ -109,18 +115,28 @@ public class Lvl1MissionUI : MonoBehaviour
         } else if (ambushRing)
         {
             promptTextObj.SetActive(true);
+            percentTextObj.SetActive(true);
             promptText.text = "Holdout Inside Objective";
-        } else if (escortRing && !defend)
+            percentText.text = UnityEngine.Mathf.Ceil(((aPercent / 10) * 100)) + "%";
+        } else if (escortRing && !escort)
         {
             promptTextObj.SetActive(true);
-            promptText.text = "Remain Inside Objective to Escort and Defend";
-        }  else if (atDoor)
+            promptText.text = "Remain Inside Objective to Escort";
+
+        }  else if (escort)
+        {
+            promptTextObj.SetActive(true);
+            percentTextObj.SetActive(true);
+            promptText.text = "Defend the Objective";
+            percentText.text = UnityEngine.Mathf.Ceil(((dPercent / 10) * 100)) + "%";
+        } else if (atDoor)
         {
             promptTextObj.SetActive(true);
             promptText.text = "Press [F] to Enter the Bunker";
         } else
         {
             promptTextObj.SetActive(false);
+            percentTextObj.SetActive(false);
         }
     }
 }
