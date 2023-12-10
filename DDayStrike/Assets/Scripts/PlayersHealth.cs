@@ -23,11 +23,15 @@ public class PlayersHealth : MonoBehaviour
         {
             currentHealth--;
             HitSource.Play();
+        }
+        if (collision.gameObject.CompareTag("Landmine"))
+        {
+            currentHealth -= 1000;
+        }
 
-            if (currentHealth <= 0)
-            {
-                GameOver();
-            }
+        if (currentHealth <= 0)
+        {
+            GameOver();
         }
     }
 
