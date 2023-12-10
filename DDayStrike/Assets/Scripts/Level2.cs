@@ -9,13 +9,18 @@ public class Level2 : MonoBehaviour
     public GameObject Keys;
     public GameObject Clipboard;
     public GameObject Radio;
-    public GameObject AmmoBox;  
+    public GameObject AmmoBox;
+    public GameObject Sol1;
+    public GameObject Sol2;
+    public GameObject Sol3;
+    public GameObject Sol4;
 
     public TextMeshProUGUI keysText;
     public TextMeshProUGUI clipboardText;
     public TextMeshProUGUI radioText;
     public TextMeshProUGUI ammoBoxText;
-    public int Count = 0; 
+    public TextMeshProUGUI solText; // Add this line for the Sol text
+    public int Count = 0;
 
     public GameObject finalObject; // The object that appears when all items are picked up
     public GameObject Prompt; // The object that appears and disappears
@@ -30,6 +35,7 @@ public class Level2 : MonoBehaviour
         }
 
         CheckForNearbyPickups();
+        CheckForDestroyedSols(); // Check for destroyed Sol objects
     }
 
     void CheckForNearbyPickups()
@@ -53,7 +59,6 @@ public class Level2 : MonoBehaviour
                 currentPickup = null;
             }
         }
-        
     }
 
     void PickUpObject(GameObject pickupObject)
@@ -73,7 +78,6 @@ public class Level2 : MonoBehaviour
             // Check if all items are picked up
             CheckForCompletion();
         }
-        
     }
 
     void UpdateTextColor(string tag, Color color)
@@ -83,6 +87,16 @@ public class Level2 : MonoBehaviour
         if (textMeshPro != null)
         {
             textMeshPro.color = color;
+        }
+    }
+
+    void CheckForDestroyedSols()
+    {
+        // Check if all Sol objects are destroyed or inactive
+        if (Sol1 == null && Sol2 == null && Sol3 == null && Sol4 == null)
+        {
+            // Update the Sol text color
+            UpdateTextColor("Sol", Color.green);
         }
     }
 
@@ -98,6 +112,8 @@ public class Level2 : MonoBehaviour
                 return radioText;
             case "AmmoBox":
                 return ammoBoxText;
+            case "Sol": // Add this case for the Sol text
+                return solText;
             default:
                 return null;
         }
@@ -108,10 +124,10 @@ public class Level2 : MonoBehaviour
         // Check if all items are picked up
         if (Count == 4)
         {
-           // ActivateFinalObject();
+            // ActivateFinalObject();
             finalObject.SetActive(true);
             Debug.Log("IT worked");
         }
-    }
 
+    }
 }
