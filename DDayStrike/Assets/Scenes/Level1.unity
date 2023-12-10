@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589245, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5922,10 +5922,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.1253167
+  m_Radius: 1.0051805
   m_Height: 16.288939
   m_Direction: 1
-  m_Center: {x: 0.6438598, y: 0.35479936, z: 0.31113246}
+  m_Center: {x: 0.6438598, y: 0.35415938, z: 0.43127358}
 --- !u!23 &749127718
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6389,10 +6389,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.0458753
+  m_Radius: 0.9876741
   m_Height: 16.288939
   m_Direction: 1
-  m_Center: {x: 0.64385986, y: 0.35616818, z: 0.39056927}
+  m_Center: {x: 0.64385986, y: 0.35628507, z: 0.44877094}
 --- !u!23 &841199851
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9837,7 +9837,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mc: {fileID: 360662968}
-  sceneName: Level2
+  Title: {fileID: 0}
+  lvlSelect: {fileID: 0}
+  sceneName1: Level1
+  sceneName2: Level2
+  sceneName3: Level3
+  Level1: {fileID: 0}
+  Level2: {fileID: 0}
+  Level3: {fileID: 0}
   lvl2: 0
 --- !u!114 &1259152722
 MonoBehaviour:
@@ -15590,10 +15597,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.96937114
+  m_Radius: 0.91766155
   m_Height: 14.403324
   m_Direction: 1
-  m_Center: {x: 0.6438603, y: 2.1258063, z: -0.17448802}
+  m_Center: {x: 0.64386064, y: 2.1258383, z: -0.22619767}
 --- !u!23 &1434741180
 MeshRenderer:
   m_ObjectHideFlags: 0

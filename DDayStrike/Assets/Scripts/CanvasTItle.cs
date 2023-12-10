@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CanvasTItle : MonoBehaviour
 {
     public TextMeshProUGUI titleText;
+    public GameObject Skip;
     public Button actionButton;
     public float fadeInDuration = 40.0f;
     public float growDuration = 40.0f;
@@ -31,6 +32,7 @@ public class CanvasTItle : MonoBehaviour
         // Check for skip input
         if (Input.GetKeyDown(KeyCode.V))
         {
+            Skip.SetActive(false);
             isSkipping = true;
             // Skip both title and button animations instantly
             SkipAnimations();
