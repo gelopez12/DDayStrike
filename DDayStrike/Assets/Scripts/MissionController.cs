@@ -61,15 +61,19 @@ public class MissionController : MonoBehaviour
     public float bangTime = 0;
     public int missionNum = 0;
     public bool lvl2Access = false;
+    private Animator up;
     private Vector3 door1 = new Vector3(118.5f, 16f, 158f);
     private Vector3 door2 = new Vector3(115.8f, 16f, 92f);
     private Vector3 door3 = new Vector3(124f, 16f, 39.27f);
+
 
     void Start()
     {
         pcScript = player.GetComponent<PlayerController>();
         BWPrefab = Instantiate(BangWire, new Vector3(71.7f, 4.4f, 100f), Quaternion.Euler(0, 90, 0));
-        
+
+        up = GetComponent<Animator>();
+
         //a = 25.0f;
 
 
@@ -79,7 +83,7 @@ public class MissionController : MonoBehaviour
         downZPos = Random.Range(38.0f, 160.0f);
         downPos = new Vector3(downXPos, downYPos, downZPos);
         ringSpawnPos = new Vector3(downXPos, 4.11f, downZPos);
-        DPPrefab = Instantiate(DownPlayer, downPos, Quaternion.Euler(90, 0, 0));
+        DPPrefab = Instantiate(DownPlayer, downPos, Quaternion.Euler(0, 0, 0));
         RRingPrefab = Instantiate(ReviveRing, ringSpawnPos, Quaternion.Euler(0, 0, 90));
 
         //"Ambush"
@@ -135,6 +139,7 @@ public class MissionController : MonoBehaviour
                 DPPrefab.transform.position += new Vector3(0, 1, 0);
                 missionNum++;
                 reviveDone = true;
+                up.SetBool("IsUP", true);
             }
         } 
         //"Ambush"
