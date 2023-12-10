@@ -123,12 +123,16 @@ public class Lvl1MissionUI : MonoBehaviour
             promptTextObj.SetActive(true);
             promptText.text = "Remain Inside Objective to Escort";
 
-        }  else if (escort)
+        }  else if (escortRing && escort)
         {
             promptTextObj.SetActive(true);
             percentTextObj.SetActive(true);
             promptText.text = "Defend the Objective";
-            percentText.text = UnityEngine.Mathf.Ceil(((dPercent / 10) * 100)) + "%";
+            percentText.text = UnityEngine.Mathf.Ceil(((dPercent / 30) * 100)) + "%";
+            if (dPercent >= 30.0f)
+            {
+                percentTextObj.SetActive(false);
+            }
         } else if (atDoor)
         {
             promptTextObj.SetActive(true);
