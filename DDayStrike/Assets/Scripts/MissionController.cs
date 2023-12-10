@@ -63,7 +63,6 @@ public class MissionController : MonoBehaviour
     public float bangTime = 0;
     public int missionNum = 0;
     public bool lvl2Access = false;
-    private Animator Standing;
     private Vector3 door1 = new Vector3(118.5f, 16f, 158f);
     private Vector3 door2 = new Vector3(115.8f, 16f, 92f);
     private Vector3 door3 = new Vector3(124f, 16f, 39.27f);
@@ -71,11 +70,10 @@ public class MissionController : MonoBehaviour
 
     void Start()
     {
-        //Standing.SetBool("IsUp", false);
+
         pcScript = player.GetComponent<PlayerController>();
         BWPrefab = Instantiate(BangWire, new Vector3(71.7f, 4.4f, 100f), Quaternion.Euler(0, 90, 0));
 
-        Standing = GetComponent<Animator>();
 
         //a = 25.0f;
 
@@ -102,7 +100,7 @@ public class MissionController : MonoBehaviour
         retZPos = Random.Range(160.0f, 170.0f);
         retrievePos = new Vector3(retXPos, retYPos, retZPos);
         ringSpawnPos = new Vector3(retXPos, 4.23f, retZPos);
-        RetObjPrefab = Instantiate(RetrieveObj, retrievePos, Quaternion.identity);
+        RetObjPrefab = Instantiate(RetrieveObj, retrievePos, Quaternion.Euler(90,0,0));
         RetRingPrefab = Instantiate(RetrieveRing, ringSpawnPos, Quaternion.Euler(0, 0, 90));
 
         //"Escort/Bangalore"
@@ -137,14 +135,15 @@ public class MissionController : MonoBehaviour
         {
             if (revive == true && Input.GetKeyDown(KeyCode.F))
             {
-                //Standing.SetBool("IsUp", true);
+                
                 Destroy(RRingPrefab);
                 //DPPrefab.transform.Rotate(-90, 0, 0);
                 //DPPrefab.transform.position += new Vector3(0, 1, 0);
                 missionNum++;
                 reviveDone = true;
-                
+               
             }
+            
         } 
         //"Ambush"
         ambush = pcScript.inAmbushRing;
