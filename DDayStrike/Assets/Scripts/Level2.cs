@@ -3,9 +3,18 @@ using System.Collections.Generic;
 using System.Xml;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Level2 : MonoBehaviour
 {
+    PlayersHealth phScript;
+    Shooting shootScript;
+    public GameObject player;
+    public Text HP;
+    public Text ammunition;
+    public int health;
+    public float ammo;
+
     public GameObject Keys;
     public GameObject Clipboard;
     public GameObject Radio;
@@ -27,8 +36,20 @@ public class Level2 : MonoBehaviour
 
     private GameObject currentPickup;
 
+    void Start()
+    {
+        phScript = player.GetComponent<PlayersHealth>();
+        shootScript = player.GetComponent<Shooting>();
+    }
+
     void Update()
     {
+        health = phScript.currentHealth;
+        HP.text = "HP: " + health + " / 5";
+
+        ammo = shootScript.Mag;
+        ammunition.text = "Ammo: " + ammo + " / 10";
+
         if (Input.GetKeyDown(KeyCode.F) && currentPickup != null)
         {
             PickUpObject(currentPickup);

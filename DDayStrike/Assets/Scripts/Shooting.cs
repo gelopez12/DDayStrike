@@ -12,7 +12,7 @@ public class Shooting : MonoBehaviour
     public AudioSource shoot;
     public AudioSource reloadPing;
     public AudioSource loadingClip;
-    private float Mag = 10.0f;
+    public float Mag = 10.0f;
     public ParticleSystem flashMu;
 
     private Renderer muzzleRenderer;

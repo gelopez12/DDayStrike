@@ -12,15 +12,23 @@ public class Level3 : MonoBehaviour
     public GameObject enemy;
     public GameObject enemyPrefab;
     public GameObject endText;
+    public Text HP;
+    public Text ammunition;
     public bool end;
     public string theEnd;
+    public int health;
+    public float ammo;
     PlayerController pcScript;
-
+    PlayersHealth phScript;
+    Shooting shootScript;
     // Start is called before the first frame update
     void Start()
     {
         //I wish there was a better way to do this, but Random would be so messy and buggy :(
         pcScript = player.GetComponent<PlayerController>();
+        phScript = player.GetComponent<PlayersHealth>();
+        shootScript = player.GetComponent<Shooting>();
+
         enemyPrefab = Instantiate(enemy, new Vector3(54f, 10.1f, 85f), Quaternion.identity);
         enemyPrefab = Instantiate(enemy, new Vector3(52f, 10.1f, 88f), Quaternion.identity);
         enemyPrefab = Instantiate(enemy, new Vector3(52f, 10.1f, 67f), Quaternion.identity);
@@ -115,6 +123,12 @@ public class Level3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        health = phScript.currentHealth;
+        HP.text = "HP: " + health + " / 100";
+
+        ammo = shootScript.Mag;
+        ammunition.text = "Ammo: " + ammo + " / 10";
+
         end = pcScript.endTouch;
         if (end)
         {
