@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Level3 : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class Level3 : MonoBehaviour
     public GameObject player;
     public GameObject enemy;
     public GameObject enemyPrefab;
+    public GameObject endText;
+    public bool end;
+    public string theEnd;
     PlayerController pcScript;
 
     // Start is called before the first frame update
@@ -110,6 +115,18 @@ public class Level3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        end = pcScript.endTouch;
+        if (end)
+        {
+            endText.SetActive(true);
+        } else
+        {
+            endText.SetActive(false);
+        }
+
+        if (end && Input.GetKeyDown(KeyCode.F))
+        {
+            SceneManager.LoadScene(theEnd);
+        }
     }
 }
