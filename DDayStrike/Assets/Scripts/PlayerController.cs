@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public bool inRetrieveRing;
     public bool inDropRing;
     public bool inEscortRing;
+    public float defendTime;
     public bool doorTouch;
     public bool landmineTouch;
 
@@ -40,6 +41,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        defendTime = mcScript.bangTime;
+
         // Get movement key inputs
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
@@ -157,9 +160,15 @@ public class PlayerController : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         //"Escort/Bangalore"
-        if (collision.gameObject.name == "Escort Collider")
+        if (collision.gameObject.name == "Escort Collider" || collision.gameObject.name == "To Escort(Clone)")
         {
-            inEscortRing = true;
+            if (defendTime < 30f)
+            {
+                inEscortRing = true;
+            }
+        } else
+        {
+            inEscortRing = false;
         }
 
         if (collision.gameObject.name == "Landmine(Clone)")

@@ -129,8 +129,9 @@ public class Lvl1MissionUI : MonoBehaviour
             percentTextObj.SetActive(true);
             promptText.text = "Defend the Objective";
             percentText.text = UnityEngine.Mathf.Ceil(((dPercent / 30) * 100)) + "%";
-            if (dPercent >= 30.0f)
+            if (dPercent == 0)
             {
+                promptTextObj.SetActive(false);
                 percentTextObj.SetActive(false);
             }
         } else if (atDoor)

@@ -10168,12 +10168,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1994e518a597da4bad5469061c15b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mc: {fileID: 1792942678}
+  mc: {fileID: 1091635934}
   minX: -6
   maxX: 122
   minZ: 28
   maxZ: 172
-  speed: 25
+  speed: 5
   bulletSpeed: 50
   turnSpeed: 500
   angle: 0
@@ -10183,10 +10183,11 @@ MonoBehaviour:
   verticalInputBool: 0
   bulletPrefab: {fileID: 7764330751560469990, guid: 02db12a3fba135641a9d4109b97b4f7d, type: 3}
   inReviveRing: 0
-  inAmbushRing: 1
+  inAmbushRing: 0
   inRetrieveRing: 0
   inDropRing: 0
   inEscortRing: 0
+  defendTime: 0
   doorTouch: 0
   landmineTouch: 0
 --- !u!95 &727447877
@@ -11711,6 +11712,108 @@ Transform:
   m_Children:
   - {fileID: 1229045383}
   m_Father: {fileID: 781790431}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1091635934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091635936}
+  - component: {fileID: 1091635935}
+  m_Layer: 0
+  m_Name: MissionController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1091635935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091635934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06941ea1e70574e459f44e82dba4599e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  DownPlayer: {fileID: 5497416689449061717, guid: c726c8c981166fe45b534bd6caef4ae1, type: 3}
+  DPPrefab: {fileID: 0}
+  Ring: {fileID: 5139392626638838420, guid: f091d7286ed00d642b384090cefe4247, type: 3}
+  ReviveRing: {fileID: 2027971137346062739, guid: 8b190a8fb6be4474daebd4ca74d493a1, type: 3}
+  RRingPrefab: {fileID: 0}
+  AmbushRing: {fileID: 4027860737327822447, guid: 721340246f56f1d47bd99b41fddb838a, type: 3}
+  ARingPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 0}
+  RetrieveObj: {fileID: 2008235828642882186, guid: 594864eee215d7145b973d63dd6608a5, type: 3}
+  RetObjPrefab: {fileID: 0}
+  RetrieveRing: {fileID: 5999489665793217883, guid: 1cdcaa41bb849fb489f30a13d7d651ba, type: 3}
+  RetRingPrefab: {fileID: 0}
+  DropRing: {fileID: 6361716246150140096, guid: 11cb10812c1f62f4080fc37f4dc739d9, type: 3}
+  DRPrefab: {fileID: 0}
+  EscortRing: {fileID: 2418739277776469243, guid: 46d36a3c7980eb044a461745e0832ae9, type: 3}
+  ERingPrefab: {fileID: 0}
+  BangWire: {fileID: 5713027205235456262, guid: f304a8e2a9e507c49b0f51e731923ccf, type: 3}
+  BWPrefab: {fileID: 0}
+  ringSpawnPos: {x: 0, y: 0, z: 0}
+  BunkerDoor: {fileID: 4612020679399550354, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+  toEscort: {fileID: 2543698980745297596, guid: 102cbc8285c5dbf41a24319126120d77, type: 3}
+  toEscortPrefab: {fileID: 0}
+  downXPos: 0
+  downYPos: 0
+  downZPos: 0
+  downPos: {x: 0, y: 0, z: 0}
+  aRingX: 0
+  aRingY: 3.37
+  aRingZ: 0
+  retXPos: 0
+  retYPos: 0
+  retZPos: 0
+  retrievePos: {x: 0, y: 0, z: 0}
+  ERSpeed: 3
+  eRingX: 0
+  eRingY: 0
+  eRingZ: 0
+  a: 0
+  num: 0
+  i: 0
+  revive: 0
+  reviveDone: 0
+  ambush: 0
+  ambushDone: 0
+  ambushTime: 0
+  retrieve: 0
+  retrieval: 0
+  retrieveDone: 0
+  drop: 0
+  dropDone: 0
+  escort: 0
+  escortDone: 0
+  boom: 0
+  door: 0
+  bangTime: 0
+  missionNum: 0
+  lvl2Access: 0
+--- !u!4 &1091635936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091635934}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.446545, y: 108.57306, z: 44.270767}
+  m_LocalScale: {x: 1.2820257, y: 1, z: 1.2698252}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1722031685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1111584230
 GameObject:
@@ -14369,6 +14472,7 @@ Transform:
   - {fileID: 621566190}
   - {fileID: 1741282171}
   - {fileID: 660384546}
+  - {fileID: 1091635936}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1727404256
@@ -16847,6 +16951,10 @@ PrefabInstance:
     - target: {fileID: 3440391892200685838, guid: 17ddea0d359b8954bbe50ab9a9a735b0, type: 3}
       propertyPath: m_Name
       value: Capsule
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440391892200685838, guid: 17ddea0d359b8954bbe50ab9a9a735b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4983830338634650114, guid: 17ddea0d359b8954bbe50ab9a9a735b0, type: 3}
       propertyPath: m_LocalPosition.x
