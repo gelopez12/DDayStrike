@@ -9465,6 +9465,7 @@ MonoBehaviour:
   inRetrieveRing: 0
   inDropRing: 0
   inEscortRing: 0
+  defendTime: 0
   doorTouch: 0
   landmineTouch: 0
 --- !u!95 &727447877

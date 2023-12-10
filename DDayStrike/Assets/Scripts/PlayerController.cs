@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        defendTime = mcScript.bangTime;
+        //defendTime = mcScript.bangTime;
 
         // Get movement key inputs
         horizontalInput = Input.GetAxis("Horizontal");
@@ -162,6 +162,7 @@ public class PlayerController : MonoBehaviour
         //"Escort/Bangalore"
         if (collision.gameObject.name == "Escort Collider" || collision.gameObject.name == "To Escort(Clone)")
         {
+            defendTime = mcScript.bangTime;
             if (defendTime < 30f)
             {
                 inEscortRing = true;

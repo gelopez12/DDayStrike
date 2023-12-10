@@ -16,7 +16,9 @@ public class Level3 : MonoBehaviour
     {
         pcScript = player.GetComponent<PlayerController>();
         enemyPrefab = Instantiate(enemy, new Vector3(32f, 10.1f, 85f), Quaternion.identity);
-        enemyPrefab = Instantiate(enemy, new Vector3(32f, 10.1f, 85f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(54f, 10.1f, 85f), Quaternion.identity);
+        enemyPrefab = Instantiate(enemy, new Vector3(52f, 10.1f, 88f), Quaternion.identity);
+
         landminePrefab = Instantiate(landmine, new Vector3(26f, 10.1f, 75f), Quaternion.identity);
     }
 
