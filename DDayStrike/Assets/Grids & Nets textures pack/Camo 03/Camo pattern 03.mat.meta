@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f828ab623a2f2d54e9b61d24894a310d
+labels:
+- Fabric
+- Military
+- Net
+- Pattern
+- Camo
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 13004
+  packageName: Grids & Nets textures pack
+  packageVersion: 1.0
+  assetPath: Assets/Grids & Nets textures pack/Camo 03/Camo pattern 03.mat
+  uploadId: 0

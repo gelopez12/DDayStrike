@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b9e6f5ba73ab34b419756f7df6ec14f1
+labels:
+- Barrier
+- Grid
+- Industrial
+- Metal
+- Pattern
+- Plastic
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 13004
+  packageName: Grids & Nets textures pack
+  packageVersion: 1.0
+  assetPath: Assets/Grids & Nets textures pack/Grid 02/Grid pattern 02.mat
+  uploadId: 0
