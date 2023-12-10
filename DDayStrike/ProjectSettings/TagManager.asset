@@ -20,6 +20,7 @@ TagManager:
   - Radio
   - AmmoBox
   - Coin
+  - Landmine
   layers:
   - Default
   - TransparentFX

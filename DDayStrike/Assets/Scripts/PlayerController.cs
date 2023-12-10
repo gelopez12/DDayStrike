@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public bool inDropRing;
     public bool inEscortRing;
     public bool doorTouch;
+    public bool landmineTouch;
 
     // Start is called before the first frame update
     void Start()
@@ -159,6 +160,11 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.name == "Escort Collider")
         {
             inEscortRing = true;
+        }
+
+        if (collision.gameObject.name == "Landmine(Clone)")
+        {
+            landmineTouch = true;
         }
     }
 
