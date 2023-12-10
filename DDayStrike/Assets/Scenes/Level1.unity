@@ -10035,6 +10035,8 @@ MonoBehaviour:
   ambushRing: 0
   escortRing: 0
   atDoor: 0
+  aPercent: 0
+  dPercent: 0
 --- !u!1001 &1288805169
 PrefabInstance:
   m_ObjectHideFlags: 0
