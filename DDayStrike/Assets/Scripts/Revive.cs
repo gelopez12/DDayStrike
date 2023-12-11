@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Revive : MonoBehaviour
 {
-    MissionController pain;
-    MissionController anotherpain;
+    MissionController pain;  
     public GameObject DGuy;
-    public GameObject Guy;
     public bool Revived;
     private Animator animator;
-    private Animator Escort;
-    public bool Moving;
+    
+   
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +23,8 @@ public class Revive : MonoBehaviour
     void Update()
     {
         Revived = pain.reviveDone;
-        Moving = anotherpain.escort;
-        if(Revived == false)
+        
+        if(Revived == true)
         {
             animator.SetBool("IsUp", true);
         }     

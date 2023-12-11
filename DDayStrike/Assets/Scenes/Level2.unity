@@ -9248,7 +9248,7 @@ MonoBehaviour:
   maxX: 122
   minZ: 28
   maxZ: 172
-  speed: 5
+  speed: 25
   bulletSpeed: 50
   turnSpeed: 500
   angle: 0

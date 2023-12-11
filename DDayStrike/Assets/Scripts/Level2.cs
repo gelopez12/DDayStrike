@@ -4,6 +4,7 @@ using System.Xml;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Level2 : MonoBehaviour
 {
@@ -155,7 +156,13 @@ public class Level2 : MonoBehaviour
         {
             // ActivateFinalObject();
             finalObject.SetActive(true);
+            SceneManager.LoadScene("Level3");
             Debug.Log("IT worked");
+        }
+
+        if(finalObject == true)
+        {
+           
         }
 
     }

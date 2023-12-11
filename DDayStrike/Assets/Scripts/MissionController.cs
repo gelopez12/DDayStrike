@@ -188,7 +188,7 @@ public class MissionController : MonoBehaviour
         {
             missionNum = 0;
             ERingPrefab = Instantiate(EscortRing, new Vector3(9.4f, 3.38f, 100f), Quaternion.Euler(0, 0, 90));
-            toEscortPrefab = Instantiate(toEscort, new Vector3(9.4f, 5f, 100f), Quaternion.identity);
+            toEscortPrefab = Instantiate(toEscort, new Vector3(9.4f, 5f, 100f), Quaternion.Euler(0, 90, 0));
         }
         if (escort == true && !escortDone )
         {

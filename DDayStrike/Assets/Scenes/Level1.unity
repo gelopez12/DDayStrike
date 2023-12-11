@@ -3450,7 +3450,7 @@ MonoBehaviour:
   BWPrefab: {fileID: 0}
   ringSpawnPos: {x: 0, y: 0, z: 0}
   BunkerDoor: {fileID: 4612020679399550354, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
-  toEscort: {fileID: 2543698980745297596, guid: 102cbc8285c5dbf41a24319126120d77, type: 3}
+  toEscort: {fileID: 1146039120}
   toEscortPrefab: {fileID: 0}
   downXPos: 0
   downYPos: 0
@@ -9815,6 +9815,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144793739}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1146039120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2543698980745297596, guid: 102cbc8285c5dbf41a24319126120d77, type: 3}
+  m_PrefabInstance: {fileID: 693153627546487774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1154952263 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6f8449a4663a4fd44b6140772d4f39f9, type: 3}
@@ -21003,6 +21008,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: To Escort
       objectReference: {fileID: 0}
+    - target: {fileID: 6001457515536948169, guid: 102cbc8285c5dbf41a24319126120d77, type: 3}
+      propertyPath: Cont
+      value: 
+      objectReference: {fileID: 360662968}
     - target: {fileID: 7337920794015483405, guid: 102cbc8285c5dbf41a24319126120d77, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1436155
@@ -21043,14 +21052,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7448709535566004502, guid: 102cbc8285c5dbf41a24319126120d77, type: 3}
-      propertyPath: Guy
-      value: 
-      objectReference: {fileID: 360662968}
-    - target: {fileID: 7448709535566004502, guid: 102cbc8285c5dbf41a24319126120d77, type: 3}
-      propertyPath: DGuy
-      value: 
-      objectReference: {fileID: 360662968}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

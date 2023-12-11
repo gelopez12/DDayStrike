@@ -10854,7 +10854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1fa2c167cfa949438fad9fd516c4c5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50000
+  maxHealth: 100
   currentHealth: 0
   HitSource: {fileID: 684846132}
   SceneIndex: 0
