@@ -80,7 +80,7 @@ public class MissionController : MonoBehaviour
 
         //"Revive"
         downXPos = 8.0f;
-        downYPos = 5.0f;
+        downYPos = 4.5f;
         downZPos = Random.Range(38.0f, 160.0f);
         downPos = new Vector3(downXPos, downYPos, downZPos);
         ringSpawnPos = new Vector3(downXPos, 4.11f, downZPos);
@@ -96,7 +96,7 @@ public class MissionController : MonoBehaviour
 
         //"Retrieve"
         retXPos = Random.Range(30.0f, 50.0f);
-        retYPos = 4.77f;
+        retYPos = 4.5f;
         retZPos = Random.Range(160.0f, 170.0f);
         retrievePos = new Vector3(retXPos, retYPos, retZPos);
         ringSpawnPos = new Vector3(retXPos, 4.23f, retZPos);
