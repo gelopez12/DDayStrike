@@ -56,7 +56,8 @@ public class Level2 : MonoBehaviour
         if (ammo == 0)
         {
             reload.text = "Press [R] to Reload";
-        } else
+        }
+        else
         {
             reload.text = "";
         }
@@ -160,11 +161,6 @@ public class Level2 : MonoBehaviour
             finalObject.SetActive(true);
             SceneManager.LoadScene("Level3");
             Debug.Log("IT worked");
-        }
-
-        if(finalObject == true)
-        {
-           
         }
 
     }
