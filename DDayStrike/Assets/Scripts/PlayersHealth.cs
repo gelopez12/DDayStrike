@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayersHealth : MonoBehaviour
 {
     public int maxHealth = 3; 
-    private int currentHealth;
+    public int currentHealth;
     public AudioSource HitSource;
     public int SceneIndex;
 
@@ -26,7 +26,7 @@ public class PlayersHealth : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Landmine"))
         {
-            currentHealth -= 1000;
+            currentHealth -= currentHealth;
         }
         if (currentHealth <= 0)
         {

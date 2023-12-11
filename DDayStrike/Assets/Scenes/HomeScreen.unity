@@ -384,7 +384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &299592734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,6 +418,8 @@ MonoBehaviour:
   BWPrefab: {fileID: 0}
   ringSpawnPos: {x: 0, y: 0, z: 0}
   BunkerDoor: {fileID: 4612020679399550354, guid: 43c1ef21e9dd105499bae999df4d42a9, type: 3}
+  toEscort: {fileID: 0}
+  toEscortPrefab: {fileID: 0}
   downXPos: 0
   downYPos: 0
   downZPos: 0
@@ -564,6 +566,7 @@ MonoBehaviour:
   mc: {fileID: 299592733}
   Title: {fileID: 1225018657}
   lvlSelect: {fileID: 519382798}
+  sceneNameHome: Home
   sceneName1: Level1
   sceneName2: Level2
   sceneName3: Level3
@@ -2982,6 +2985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  currentHealth: 0
   HitSource: {fileID: 1768627489}
   SceneIndex: 0
 --- !u!54 &1768627494
@@ -3050,6 +3054,7 @@ MonoBehaviour:
   shoot: {fileID: 1768627492}
   reloadPing: {fileID: 1768627491}
   loadingClip: {fileID: 1768627490}
+  Mag: 10
   flashMu: {fileID: 1895268181}
 --- !u!114 &1768627497
 MonoBehaviour:
@@ -3082,7 +3087,10 @@ MonoBehaviour:
   inRetrieveRing: 0
   inDropRing: 0
   inEscortRing: 0
+  defendTime: 0
   doorTouch: 0
+  landmineTouch: 0
+  endTouch: 0
 --- !u!95 &1768627498
 Animator:
   serializedVersion: 7

@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     public float defendTime;
     public bool doorTouch;
     public bool landmineTouch;
+    public bool endTouch;
 
     // Start is called before the first frame update
     void Start()
@@ -154,6 +155,15 @@ public class PlayerController : MonoBehaviour
         } else
         {
             doorTouch = false;
+        }
+
+        //End
+        if (collision.gameObject.name == "End Collider")
+        {
+            endTouch = true;
+        } else
+        {
+            endTouch= false;
         }
     }
 

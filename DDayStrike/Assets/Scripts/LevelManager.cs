@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
     public GameObject mc;
     public GameObject Title;
     public GameObject lvlSelect;
-    //public string sceneName;
+    public string sceneNameHome;
     public string sceneName1;
     public string sceneName2;
     public string sceneName3;
@@ -46,6 +46,10 @@ public class LevelManager : MonoBehaviour
     {
         Title.SetActive(true);
         lvlSelect.SetActive(false);
+    }
+    public void changeSceneHome()
+    {
+        SceneManager.LoadScene(sceneNameHome);
     }
     public void changeScene1()
     {
