@@ -31,7 +31,8 @@ public class Level2 : MonoBehaviour
     public TextMeshProUGUI clipboardText;
     public TextMeshProUGUI radioText;
     public TextMeshProUGUI ammoBoxText;
-    public TextMeshProUGUI solText; // Add this line for the Sol text
+    public TextMeshProUGUI solText;
+    public TextMeshProUGUI FindExit;
     public int Count = 0;
 
     public GameObject finalObject; // The object that appears when all items are picked up
@@ -43,10 +44,12 @@ public class Level2 : MonoBehaviour
     {
         phScript = player.GetComponent<PlayersHealth>();
         shootScript = player.GetComponent<Shooting>();
+        FindExit.gameObject.SetActive(false);
     }
 
     void Update()
     {
+        
         maxiHealth = phScript.maxHealth;
         health = phScript.currentHealth;
         HP.text = "HP: " + health + " / " + maxiHealth;
@@ -126,10 +129,17 @@ public class Level2 : MonoBehaviour
     void CheckForDestroyedSols()
     {
         // Check if all Sol objects are destroyed or inactive
-        if (Sol1 == null && Sol2 == null && Sol3 == null && Sol4 == null)
+        if (Count == 4 && Sol1 == null && Sol2 == null && Sol3 == null && Sol4 == null)
         {
             // Update the Sol text color
             UpdateTextColor("Sol", Color.green);
+            finalObject.SetActive(true);
+            keysText.gameObject.SetActive(false);
+            clipboardText.gameObject.SetActive(false);
+            radioText.gameObject.SetActive(false);
+            ammoBoxText.gameObject.SetActive(false);
+            solText.gameObject.SetActive(false);
+            FindExit.gameObject.SetActive(true);
         }
     }
 
@@ -158,10 +168,16 @@ public class Level2 : MonoBehaviour
         if (Count == 4)
         {
             // ActivateFinalObject();
-            finalObject.SetActive(true);
-            SceneManager.LoadScene("Level3");
+            
             Debug.Log("IT worked");
         }
 
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Coin"))
+        {
+            SceneManager.LoadScene("Level3");
+        }
     }
 }
