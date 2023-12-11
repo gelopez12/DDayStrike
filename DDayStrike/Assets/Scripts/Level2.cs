@@ -12,6 +12,7 @@ public class Level2 : MonoBehaviour
     public GameObject player;
     public Text HP;
     public Text ammunition;
+    public Text reload;
     public int health;
     public float ammo;
 
@@ -49,6 +50,13 @@ public class Level2 : MonoBehaviour
 
         ammo = shootScript.Mag;
         ammunition.text = "Ammo: " + ammo + " / 10";
+        if (ammo == 0)
+        {
+            reload.text = "Press [R] to Reload";
+        } else
+        {
+            reload.text = "";
+        }
 
         if (Input.GetKeyDown(KeyCode.F) && currentPickup != null)
         {

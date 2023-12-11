@@ -14,6 +14,7 @@ public class Level3 : MonoBehaviour
     public GameObject endText;
     public Text HP;
     public Text ammunition;
+    public Text reload;
     public bool end;
     public string theEnd;
     public int health;
@@ -128,6 +129,14 @@ public class Level3 : MonoBehaviour
 
         ammo = shootScript.Mag;
         ammunition.text = "Ammo: " + ammo + " / 10";
+        if (ammo == 0)
+        {
+            reload.text = "Press [R] to Reload";
+        }
+        else
+        {
+            reload.text = "";
+        }
 
         end = pcScript.endTouch;
         if (end)
