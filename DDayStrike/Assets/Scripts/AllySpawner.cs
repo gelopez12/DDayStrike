@@ -6,28 +6,47 @@ public class AllySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public Transform[] spawnPoints;
-    public float spawnInterval = 10.0f;
+    public float spawnInterval = 2.0f;
+
+    private List<Transform> availableSpawnPoints = new List<Transform>();
 
     void Start()
     {
-        InvokeRepeating("SpawnAlly", 0f, spawnInterval);
+        if (spawnPoints.Length > 0)
+        {
+            availableSpawnPoints.AddRange(spawnPoints);
+            InvokeRepeating("SpawnAlly", 0f, spawnInterval);
+        }
+        else
+        {
+            Debug.LogError("No spawn points assigned to the AllySpawner!");
+        }
     }
 
     void Update()
     {
 
     }
+
     void SpawnAlly()
     {
-        // Check if there are valid spawn points
-        if (spawnPoints.Length > 0)
+        // Check if there are available spawn points
+        if (availableSpawnPoints.Count > 0)
         {
-            Transform randomSpawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+            // Get a random spawn point from the available list
+            int randomIndex = Random.Range(0, availableSpawnPoints.Count);
+            Transform randomSpawnPoint = availableSpawnPoints[randomIndex];
 
-
-
+            // Instantiate the enemy at the selected spawn point
             Instantiate(enemyPrefab, randomSpawnPoint.position, Quaternion.Euler(0, 90, 0));
+
+            // Remove the used spawn point from the available list
+            availableSpawnPoints.RemoveAt(randomIndex);
+        }
+        else
+        {
+            // If all spawn points have been used, reset the available list
+            availableSpawnPoints.AddRange(spawnPoints);
         }
     }
-
 }
