@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc91ac4cc9b65d42ba83de3aed11bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet3Prefab: {fileID: 7764330751560469990, guid: 02db12a3fba135641a9d4109b97b4f7d, type: 3}
   maxHealth: 1
 --- !u!114 &-1671467827595381742
 MonoBehaviour:
@@ -259,12 +260,12 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 274b23fcb2ff684478ea8759cea1e317, type: 3}
   m_Controller: {fileID: 9100000, guid: 36440098e12b20146820af2783c52879, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 1
-  m_ApplyRootMotion: 0
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
+  m_AnimatePhysics: 1
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1

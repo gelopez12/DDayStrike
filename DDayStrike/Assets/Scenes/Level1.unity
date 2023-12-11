@@ -21847,63 +21847,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2100724495}
   m_SourcePrefab: {fileID: 100100000, guid: 7c442b9b6852b8a4f93306f3d154d471, type: 3}
---- !u!1001 &4717461715172858966
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1643584023258271957, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.401
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643584023258271957, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643584023258271957, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643584023258271957, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643584023258271957, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643584023258271957, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643584023258271957, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643584023258271957, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643584023258271957, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1643584023258271957, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1940621579357828361, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
-      propertyPath: m_Name
-      value: AllyBuddies
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a6ad1c3397855214caa2135f2aee41f8, type: 3}
 --- !u!1001 &5647587552870234778
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22168,4 +22111,3 @@ SceneRoots:
   - {fileID: 1283816370783053385}
   - {fileID: 6481154193220051678}
   - {fileID: 631427254}
-  - {fileID: 4717461715172858966}

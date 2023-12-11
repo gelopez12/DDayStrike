@@ -6,11 +6,12 @@ public class EnemyHealth : MonoBehaviour
 {
     public GameObject bullet3Prefab;
     public int maxHealth = 1; 
-    private int currentHealth; 
+    private int currentHealth;
 
     void Start()
     {
         currentHealth = maxHealth; 
+       
     }
 
     void OnCollisionEnter(Collision collision)
@@ -22,6 +23,8 @@ public class EnemyHealth : MonoBehaviour
             if (currentHealth <= 0)
             {
                 //EnemySpawner.OnEnemyKilled?.Invoke();
+                
+
                 Destroy(gameObject);
             }
         }
