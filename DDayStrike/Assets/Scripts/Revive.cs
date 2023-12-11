@@ -7,9 +7,7 @@ public class Revive : MonoBehaviour
     MissionController pain;  
     public GameObject DGuy;
     public bool Revived;
-    private Animator animator;
-    
-   
+    private Animator animator;  
 
     // Start is called before the first frame update
     void Start()
