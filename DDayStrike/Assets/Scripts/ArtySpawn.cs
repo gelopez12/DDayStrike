@@ -6,10 +6,10 @@ using UnityEngine;
 public class ArtySpawn : MonoBehaviour
 {
     public GameObject artilleryShellPrefab;
-    public float minX = 5f;
-    public float maxX = 60f;
-    public float minZ = 10f;
-    public float maxZ = 193f;
+    public float minX = 15.0f;
+    public float maxX = 55.0f;
+    public float minZ = 20.0f;
+    public float maxZ = 185.0f;
     public float shellFallSpeed = 10f;
 
     void Start()
@@ -22,8 +22,8 @@ public class ArtySpawn : MonoBehaviour
     {
         while (true)
         {
-            // Wait for 5 seconds
-            yield return new WaitForSeconds(5f);
+            
+            yield return new WaitForSeconds(10.0f);
 
             // Spawn artillery shell
             SpawnArtilleryShell();
@@ -34,7 +34,7 @@ public class ArtySpawn : MonoBehaviour
     {
         Vector3 randomPosition = new Vector3(
             Random.Range(minX, maxX),
-            5.0f,
+            6.0f,
             Random.Range(minZ, maxZ)
         );
 

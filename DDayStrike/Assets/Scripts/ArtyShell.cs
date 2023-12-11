@@ -5,18 +5,7 @@ using UnityEngine;
 public class ArtyShell : MonoBehaviour
 {
     public ParticleSystem explosionParticleEffect;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }    
+    public AudioSource explosionSound;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -26,11 +15,20 @@ public class ArtyShell : MonoBehaviour
             // Play the explosion particle effect
             Instantiate(explosionParticleEffect, transform.position, Quaternion.identity);
 
+            // Play the explosion sound if an audio source is provided and the clip is assigned
+            if (explosionSound != null && explosionSound.clip != null)
+            {
+                explosionSound.Play();
+            }
+            else
+            {
+                Debug.LogWarning("Explosion sound or clip is not set.");
+            }
+
+            // Destroy the artillery shell after 5 seconds
+            Destroy(gameObject, 2f);
+
             // Optionally, you can add additional logic here (e.g., damage to nearby objects, terrain deformation).
-
-            // Destroy the artillery shell
-            Destroy(gameObject);
         }
-    }
-
+    }  
 }

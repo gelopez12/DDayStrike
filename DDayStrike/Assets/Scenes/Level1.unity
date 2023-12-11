@@ -21289,6 +21289,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 174383576849796133, guid: 4343a66c898507046b64100ba50f9937, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3907202016844524287, guid: 4343a66c898507046b64100ba50f9937, type: 3}
       propertyPath: m_Name
       value: ArtyShell
