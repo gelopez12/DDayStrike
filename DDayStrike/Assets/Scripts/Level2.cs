@@ -14,6 +14,7 @@ public class Level2 : MonoBehaviour
     public Text HP;
     public Text ammunition;
     public Text reload;
+    public int maxiHealth;
     public int health;
     public float ammo;
 
@@ -46,8 +47,9 @@ public class Level2 : MonoBehaviour
 
     void Update()
     {
+        maxiHealth = phScript.maxHealth;
         health = phScript.currentHealth;
-        HP.text = "HP: " + health + " / 5";
+        HP.text = "HP: " + health + " / " + maxiHealth;
 
         ammo = shootScript.Mag;
         ammunition.text = "Ammo: " + ammo + " / 10";
