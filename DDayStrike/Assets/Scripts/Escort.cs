@@ -10,15 +10,18 @@ public class Escort : MonoBehaviour
     public GameObject Cont;
     private Animator IsEscorting;
     private Animator IsDone;
+    private Animator Dead;
     public bool Moving;
     public bool Stopped;
+    public bool IsDead;
 
     void Start()
     {
         
-         mis = Cont.GetComponent<MissionController>();
+        mis = Cont.GetComponent<MissionController>();
         IsEscorting = GetComponent<Animator>();
         IsDone = GetComponent<Animator>();  
+        Dead = GetComponent<Animator>();
 
     }
 
@@ -27,6 +30,7 @@ public class Escort : MonoBehaviour
     {
         Moving = mis.escort;
         Stopped = mis.escortDone;
+        IsDead = mis.boom;
         if (Stopped != true)
         {
             if (Moving == true)
@@ -42,6 +46,13 @@ public class Escort : MonoBehaviour
         {
             IsEscorting.SetBool("IsWalking", false);
             IsDone.SetBool("IsDone", true);
+        }
+
+        if(IsDead == true)
+        {
+            IsEscorting.SetBool("IsWalking", false);
+            IsDone.SetBool("IsDone", false);
+            Dead.SetBool("IsDead", true);
         }
     }
 
