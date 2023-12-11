@@ -566,6 +566,7 @@ MonoBehaviour:
   mc: {fileID: 299592733}
   Title: {fileID: 1225018657}
   lvlSelect: {fileID: 519382798}
+  sceneNameHome: Home
   sceneName1: Level1
   sceneName2: Level2
   sceneName3: Level3
