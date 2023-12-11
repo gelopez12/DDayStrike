@@ -30,7 +30,7 @@ public class DeadScript : MonoBehaviour
                 Debug.LogWarning("No previous scene available.");
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetKeyDown(KeyCode.Backspace))
         {
             SceneManager.LoadScene("HomeScreen");
         }
