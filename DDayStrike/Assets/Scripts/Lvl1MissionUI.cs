@@ -9,12 +9,16 @@ public class Lvl1MissionUI : MonoBehaviour
 {
     MissionController mcScript;
     PlayerController pcScript;
+    PlayersHealth phScript;
+    Shooting shootScript;
+    public Text HP;
+    public Text ammunition;
+    public Text reload;
+    public int health;
+    public int maxiHealth;
+    public float ammo;
     public GameObject mc;
     public GameObject player;
-    public GameObject firstMissions;
-    public GameObject escortMissions;
-    public GameObject promptTextObj;
-    public GameObject percentTextObj;
     public Text reviveText;
     public Text retrieveText;
     public Text ambushText;
@@ -43,11 +47,28 @@ public class Lvl1MissionUI : MonoBehaviour
     {
         mcScript = mc.GetComponent<MissionController>();
         pcScript = player.GetComponent<PlayerController>();
+        phScript = player.GetComponent<PlayersHealth>();
+        shootScript = player.GetComponent<Shooting>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        maxiHealth = phScript.maxHealth;
+        health = phScript.currentHealth;
+        HP.text = "HP: " + health + " / " + maxiHealth;
+
+        ammo = shootScript.Mag;
+        ammunition.text = "Ammo: " + ammo + " / 10";
+        if (ammo == 0)
+        {
+            reload.text = "Press [R] to Reload";
+        }
+        else
+        {
+            reload.text = "";
+        }
+
         //Green Text and Change Missions
         revive = mcScript.reviveDone;
         retrieve = mcScript.retrieveDone;
@@ -86,8 +107,12 @@ public class Lvl1MissionUI : MonoBehaviour
 
         if (revive && drop && ambush)
         {
-            firstMissions.SetActive(false);
-            escortMissions.SetActive(true);
+            reviveText.text = "";
+            retrieveText.text = "";
+            ambushText.text = "";
+            escortText.text = "Escort the Bangalore";
+            defendText.text = "Defend the Bangalore";
+            findText.text = "Find the Bunker Entrance";
             ambush = false;
         }
         if (escort)
@@ -102,46 +127,37 @@ public class Lvl1MissionUI : MonoBehaviour
         //Text Prompts
         if (reviveRing && !revive)
         {
-            promptTextObj.SetActive(true);
             promptText.text = "Press [F] to Revive";
         } else if (retrieveRing)
         {
-            promptTextObj.SetActive(true);
             promptText.text = "Press [F] to Retrieve Bangalore";
         } else if (dropRing)
         {
-            promptTextObj.SetActive(true);
             promptText.text = "Press [F] to Deliver Bangalore";
         } else if (ambushRing)
         {
-            promptTextObj.SetActive(true);
-            percentTextObj.SetActive(true);
             promptText.text = "Holdout Inside Objective";
             percentText.text = UnityEngine.Mathf.Ceil(((aPercent / 10) * 100)) + "%";
         } else if (escortRing && !escort)
         {
-            promptTextObj.SetActive(true);
             promptText.text = "Remain Inside Objective to Escort";
 
         }  else if (escortRing && escort)
         {
-            promptTextObj.SetActive(true);
-            percentTextObj.SetActive(true);
             promptText.text = "Defend the Objective";
             percentText.text = UnityEngine.Mathf.Ceil(((dPercent / 30) * 100)) + "%";
             if (dPercent == 0)
             {
-                promptTextObj.SetActive(false);
-                percentTextObj.SetActive(false);
+                promptText.text = "";
+                percentText.text = "";
             }
         } else if (atDoor)
         {
-            promptTextObj.SetActive(true);
             promptText.text = "Press [F] to Enter the Bunker";
         } else
         {
-            promptTextObj.SetActive(false);
-            percentTextObj.SetActive(false);
+            promptText.text = "";
+            percentText.text = "";
         }
     }
 }

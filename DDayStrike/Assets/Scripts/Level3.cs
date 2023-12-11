@@ -17,6 +17,7 @@ public class Level3 : MonoBehaviour
     public Text reload;
     public bool end;
     public string theEnd;
+    public int maxiHealth;
     public int health;
     public float ammo;
     PlayerController pcScript;
@@ -124,8 +125,9 @@ public class Level3 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        maxiHealth = phScript.maxHealth;
         health = phScript.currentHealth;
-        HP.text = "HP: " + health + " / 100";
+        HP.text = "HP: " + health + " / " + maxiHealth;
 
         ammo = shootScript.Mag;
         ammunition.text = "Ammo: " + ammo + " / 10";
