@@ -38,7 +38,7 @@ public class AllySpawner : MonoBehaviour
             Transform randomSpawnPoint = availableSpawnPoints[randomIndex];
 
             // Instantiate the enemy at the selected spawn point
-            Instantiate(enemyPrefab, randomSpawnPoint.position, Quaternion.Euler(0, 90, 0));
+            Instantiate(enemyPrefab, randomSpawnPoint.position, Quaternion.Euler(90, 0, 0));
 
             // Remove the used spawn point from the available list
             availableSpawnPoints.RemoveAt(randomIndex);
