@@ -1418,7 +1418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf4af0e7e7412840b361dce9c99622d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPre: {fileID: 7764330751560469990, guid: 02db12a3fba135641a9d4109b97b4f7d, type: 3}
   shootInterval: 1
 --- !u!82 &4298161470915184889
 AudioSource:
@@ -1528,7 +1527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf4af0e7e7412840b361dce9c99622d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPre: {fileID: 0}
   shootInterval: 0.5
 --- !u!1 &1729589970735266
 GameObject:
