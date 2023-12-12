@@ -26,6 +26,7 @@ public class Level2 : MonoBehaviour
     public GameObject Sol2;
     public GameObject Sol3;
     public GameObject Sol4;
+    //public GameObject light;
 
     public TextMeshProUGUI keysText;
     public TextMeshProUGUI clipboardText;

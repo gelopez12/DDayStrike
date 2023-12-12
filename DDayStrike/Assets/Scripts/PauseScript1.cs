@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PauseScript3 : MonoBehaviour
+public class PauseScript1 : MonoBehaviour
 {
     int i = 2;
     Shooting shooting;
@@ -69,10 +69,11 @@ public class PauseScript3 : MonoBehaviour
         {
             paused.SetActive(false);
             controllsMenu.SetActive(true);
-        } else if (control == 0 && i % 2 == 1)
+        }
+        else if (control == 0 && i % 2 == 1)
         {
             paused.SetActive(true);
             controllsMenu.SetActive(false);
-        } 
+        }
     }
 }

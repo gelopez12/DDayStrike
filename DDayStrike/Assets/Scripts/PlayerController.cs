@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //"Retrieve"
-        if (collision.gameObject.name == "Retrieve Collider" || collision.gameObject.name == "Retrieve Object(Clone)")
+        if (collision.gameObject.name == "Retrieve Collider" || collision.gameObject.name == "Bangalore(Clone)")
         {
             inRetrieveRing = true;
         } else
