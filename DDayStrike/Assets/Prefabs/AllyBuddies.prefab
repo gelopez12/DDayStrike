@@ -5105,7 +5105,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f4209d51d1ad0434299f2d498ee076ba, type: 3}
   m_Controller: {fileID: 9100000, guid: ba29270c01f461443b1a6337cc4a11b4, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -5152,7 +5152,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  allyPrefab: {fileID: 1940621579357828361}
   flash: {fileID: 8980693023774599573}
+  allyPos: {x: 0, y: 0, z: 0}
+  allyX: 0
+  allyY: 0
+  allyZ: 0
 --- !u!54 &381057644777913963
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5179,7 +5184,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &2305154416099332641
 GameObject:
   m_ObjectHideFlags: 0
